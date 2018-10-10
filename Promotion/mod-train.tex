@@ -190,27 +190,32 @@ rcolwidth=0.95\linewidth
 
 %%==========================================================================================
 %%
-\begin{slide}{Membership Rights}
+\begin{slide}{Membership}
 	\begin{table}[htp]
-		\caption{The requirements and rights of members at different stages}
+		\caption{Responsibility and Obligation}
 		\begin{center}
 			\begin{threeparttable}
-				\begin{tabular}{c|c|c|c|c}
+				\begin{tabular}{ll|c|c|c|c}
 					\toprule
-					 & \textbf{Flipper} & \textbf{Trainee} & \textbf{Infinity}  & \textbf{Alumni}\\ \midrule
-					DingTalk & Y & Y & Y & Y\\
-					Academy Email & N & Y & Y & Y\\
-					Seminar Attendance & C & Y & Y & N\\
-					Seminar Presentation & N & I & Y & I\\
-					Seminar Q?	 & N & C & Y & Y\\
-					Reading Team & Y & Y & I & I \\
-					Admin Permissin	 &   &   & Y & Y\\
-					ID Hiding	 &   &   & Y & Y\\
-					Blog Subdomain Name &   &   & Y & Y\\
+					 			&		& \textbf{Flipper} & \textbf{Trainee} & \textbf{Infinity}  & \textbf{Alumni}\\ 
+					\midrule
+					\multicolumn{2}{l|}{DingTalk} 						& Y & Y & Y & Y\\
+					\multicolumn{2}{l|}{Academy Email} 					& N & Y & Y & Y\\
+					\multicolumn{2}{l|}{ID Hiding}	 					& N & N & Y & Y\\
+					\multicolumn{2}{l|}{Subdomain} 						& N & N & Y & Y\\ 
+					\midrule
+					\multirow{3}{*}{Seminar}  		& Attendance			& C & C & C & O\\
+													& Presentation 		& N & O & C & I\\
+													& Q\&A 	 			& N & C & C & O\\
+					\midrule
+					\multirow{3}{*}{FLIP (06)}  		& Attendance 		& O & C & O & I \\
+					 								& Presentation 		& N & O & C & O \\
+													& Q\&A 				& Y & O & O & O \\
 					 \bottomrule
 				\end{tabular}
 				\begin{tablenotes}
-					\item[1] C: Compulsory ; \item[2] I: Invitation
+					\item Y: \texttt{Yes} \quad N: \texttt{No} \quad
+					 C: \texttt{Compulsory} \quad O: \texttt{Optional} \quad I: \texttt{Invitation}
 				\end{tablenotes}
 			\end{threeparttable}
 		\end{center}
