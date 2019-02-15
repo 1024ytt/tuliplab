@@ -1,0 +1,319 @@
+\documentclass[
+ size=14pt,
+ paper=smartboard,  % a4paper, smartboard, screen
+ mode=present, 		% present, handout, print
+ display=slides, 	% slidesnotes, notes, slides
+ style=tuliplab,  	% TULIP Lab style
+ pauseslide,
+ fleqn,leqno]{powerdot}{}
+
+ %%==========================================================================================
+\input{mod-preamble}
+%%==========================================================================================
+
+% title
+% TODO: Customize to your Own Title, Name, Address
+%
+\title{Scientific Writing}
+\author{
+Shu Li
+\\
+\\School of Information Technology
+\\Deakin University, Australia
+}
+\date{\gitCommitterDate}
+
+
+% Customize the setting of slides
+\pdsetup{
+% TODO: Customize tlhe left footer, and right footer
+rf=\href{http://www.tulip.org.au}{
+Last Changed by: \textsc{\gitCommitterName}\ \gitVtagn-\gitAbbrevHash\ (\gitAuthorDate)
+},
+cf={TULIP Academy},
+}
+
+\begin{document}
+
+\maketitle
+
+%%==========================================================================================
+\section{Perface}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{The purpose of your paper is...}
+	\begin{figure}[htbp]
+	    \includegraphics[width=0.5\linewidth]{writing-skills/purpose.eps}
+	\end{figure}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{The purpose of your paper is...}
+	\begin{itemize}
+		\item Generally, 
+		\begin{itemize}
+			\item to convey your idea
+        	\item from your head to your reader’s head
+    	\end{itemize}
+    \end{itemize}
+    \begin{itemize}
+    	\item Specifically,
+    	\begin{itemize}
+	    	\item A good idea
+	    	\item Research motivation
+	    	\item Method to solve the problem
+	    	\item Experimental results to prove the effectiveness of the method
+    	\end{itemize}
+	\end{itemize}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{What are readers?}
+\twocolumn[
+lcolwidth=0.5\linewidth,
+rcolwidth=0.45\linewidth
+]
+{
+	\begin{itemize}
+		\item The most important readers are
+			\begin{itemize}
+				\item Reviewers!!!	
+			\end{itemize}
+		\item What reviewers look for? 
+			\begin{itemize}
+				\item Readers have expectations when they read, and the most effective way to write is to fulfill their expectations.
+			\end{itemize}
+	\end{itemize}
+}
+{	
+	\begin{figure}	
+		\includegraphics[width=\linewidth]{./writing-skills/reviewers.eps}
+	\end{figure}
+}	
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%==========================================================================================
+\section{Before writing}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{Some questions you should have in mind before writing}
+	\begin{itemize}
+		\item The \textcolor{orange}{problem} to be investigated
+		\item The \textcolor{orange}{challenges/limits/barriers} of the existing solutions (3-4 challenges)
+		\item Why could \textcolor{orange}{the proposed approach avoids these challenges}
+		\item How to \textcolor{orange}{prove} this method has solved these challenges	
+		\item Clearly state \textcolor{orange}{contributions} corresponding to the challenges above	
+	\end{itemize}	
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{What is better before writing?}
+	\begin{itemize}
+		\item Select similar 1\~{}2 articles as templates 
+			\begin{itemize}
+				\item different types of articles are better to prevent plagiarism
+			\end{itemize}	
+	\end{itemize}	
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{When do you start writing?}
+	\begin{itemize}
+		\item Begin to write mannuscipt when the algorithm and the experiments are clear. You have a clear framework then.
+		\item The algorithm design and performance and experimental results can be adjusted in the process of writing.
+		\item However, some terminology such as the proposed algorithm name and notation abpout relevant data must be determined.
+			\begin{itemize}
+				\item Algorithm name need to be catchy: FPDZxs, for example, is not as catchy as Fredos.
+			\end{itemize}		
+	\end{itemize}	
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%==========================================================================================
+\section{Structure of a paper}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{Stereotyped writing}
+\twocolumn[lcolwidth=0.4\linewidth,
+rcolwidth=0.6\linewidth
+]
+{
+	\begin{itemize}
+		\item Title
+		\item Authors
+		\item Abstract
+		\item Introduction
+		\item Relate work
+		\item Methods
+		\item Experimental Results
+		\item Discussion
+		\item Acknowledgement
+		\item Cited references		
+	\end{itemize}
+	}
+{
+	\begin{figure}	
+		\includegraphics[width=0.5\textwidth]{./writing-skills/stereotypedwriting.eps}
+	\end{figure}
+}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{Methods section}
+	\begin{itemize}
+		\item If this paper is about a new method/technique/algorithm developed, write its novel aspects in great detail. 
+		\item After the method section completed, ask yourself following questions
+			\begin{itemize}
+				\item Are all new terms defined? 
+				\item If you read this section for the first time, do you have enough information to reproduce all the work?
+			\end{itemize}
+	\end{itemize}	
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{Experimental Results}
+	\begin{itemize}
+		\item The more tests you can find or design, the more likely your work will be accepted and used by others.
+		\item Data unrelated to the central theme should not be included in the paper because they will only confuse readers.
+	\end{itemize}	
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{Title}
+	\begin{itemize}
+		\item The title can advertise your methods, your results, or the implications of your results.
+		\item A title is the paper in one sentence. Put the most important, sexy information in your title. 
+	\end{itemize}	
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{Introduction section}
+	\begin{itemize}
+		\item The first sentence: link the first sentence to the title of the paper
+		\item The first paragraph
+			\begin{itemize}
+				\item some of the terms used in the title
+				\item the field of research and its importance
+			\end{itemize}
+		\item The second paragraph
+			\begin{itemize}
+				\item a critical survey of the field: solution, or partial solution, the existing unsolved problem, the difficulties or challenges
+			\end{itemize}
+		\item The third paragraph
+			\begin{itemize}
+				\item the proposed solution, the results, possible implications
+			\end{itemize}
+	\end{itemize}	
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{Discussion section}
+	\begin{itemize}
+		\item Separate the results from their interpretations, implications and conclusion
+			\begin{itemize}
+				\item start with a review of results obtained and their interpretations 
+				\item various trials and tests done, the effects of parameter changes on results, comparisons to other studies, problems yet to be solved, future or on-going work
+			\end{itemize}
+	\end{itemize}	
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{Abstract section}
+	\begin{itemize}
+		\item the importance of the subject area (linked backward to title)
+		\item the problem to be investigated
+		\item the uniqueness of your approach 
+		\item the significance
+		\item implications and impact of the results
+	\end{itemize}	
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{Authors}
+	\begin{itemize}
+		\item CS specification
+			\begin{itemize}
+				\item The person who came up with the problem/the idea is \textcolor{orange}{the first author}. 
+				\item Other people who do the experiments, wirte the literature, even if write completely, can only be other authors, maybe second.
+			\end{itemize}
+		\item In Tulip
+			\begin{itemize}
+				\item \textcolor{orange}{The first author} is the one who writes the paper even if the question/idea/experiment are done by someone else's.
+				\item Generally, if a tulip member completes his/her experiment and paper writing, he/she will be the first author in most cases.
+			\end{itemize}
+	\end{itemize}	
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%==========================================================================================
+% \section{Readers' expectations}
+
+
+
+%%==========================================================================================
+\section{Tools}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{Tools}
+	\begin{itemize}
+		\item \href{http://www.phrasebank.manchester.ac.uk}{Academic phrasebank (www.phrasebank.manchester.ac.uk)}
+		\item \href{http://latexqc.ieee.org/}{Latex check (latexqc.ieee.org)}
+		\item English Writing check 
+			\begin{itemize}
+				\item  \href{https://app.grammarly.com/}{grammerly (app.grammarly.com)}
+		    	\item  \href{http://www.netspeak.org/}{netspeak (www.netspeak.org)}
+		    	\item  \href{http://linggle.com/}{linggle (linggle.com)}
+		    \end{itemize}
+	\end{itemize}
+
+	\begin{figure}	
+		\subfigure{
+			\includegraphics[width=0.5\textwidth]{./writing-skills/linggle.eps}}
+		\subfigure{
+			\includegraphics[width=0.5\textwidth]{./writing-skills/netspeak.eps}
+		}
+	\end{figure}
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%==========================================================================================
+\section{Reference}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{Reference}
+	\begin{itemize}
+		\item The Science of Scientific Writing. George D. Gopen and Judith A. Swan
+		\item Recipe for a Quality Scientific Paper: Fulfill Readers! and Reviewers! Expectations. Yaoqi Zhou, Indiana University School of Informatics, Indiana University-Purdue University at Indianapolis Center for Computational Biology and Bioinformatics, Indiana University School of Medicine
+		\item How to Write a Paper. Mike Ashby, Engineering Department, University of Cambridge, Cambridge 6rd Edition, April 2005
+		\item How to write a great research paper. Simon Peyton Jones, Microsoft Research, Cambridge
+	\end{itemize}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% %%==========================================================================================
+\end{document}
+
+\endinput
