@@ -1,0 +1,586 @@
+%
+% ---------------------------------------------------------------
+% Copyright (C) 2012-2018 Gang Li
+% ---------------------------------------------------------------
+%
+% This work is the default powerdot-tuliplab style test file and may be
+% distributed and/or modified under the conditions of the LaTeX Project Public
+% License, either version 1.3 of this license or (at your option) any later
+% version. The latest version of this license is in
+% http://www.latex-project.org/lppl.txt and version 1.3 or later is part of all
+% distributions of LaTeX version 2003/12/01 or later.
+%
+% This work has the LPPL maintenance status "maintained".
+%
+% This Current Maintainer of this work is Gang Li.
+%
+%
+
+\documentclass[
+ size=14pt,
+ paper=smartboard,  %a4paper, smartboard, screen
+ mode=present, 		%present, handout, print
+ display=slides, 	% slidesnotes, notes, slides
+ style=tuliplab,  	% TULIP Lab style
+ pauseslide,
+ fleqn,leqno]{powerdot}
+
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{boxedminipage}
+\usepackage{media9}
+\usepackage{rotate}
+\usepackage{calc}
+\usepackage[absolute]{textpos}
+\usepackage{psfrag,overpic}
+\usepackage{fouriernc}
+\usepackage{pstricks,pst-node,pst-text,pst-3d,pst-grad}
+\usepackage{moreverb,epsfig,subfigure}
+\usepackage{pstricks}
+\usepackage{pstricks-add}
+\usepackage{pst-text}
+\usepackage{pst-node, pst-tree}
+\usepackage{booktabs}
+\usepackage{etex}
+\usepackage{breqn}
+\usepackage{multirow}
+\usepackage{gitinfo2}
+\usepackage{xcolor}
+
+\usepackage{todonotes}
+% \usepackage{pst-rel-points}
+\usepackage{animate}
+\usepackage{fontawesome}
+
+\usepackage{textcomp}
+
+\usepackage{listings}
+\lstset{frameround=fttt,
+frame=trBL,
+stringstyle=\ttfamily,
+backgroundcolor=\color{yellow!20},
+basicstyle=\footnotesize\ttfamily}
+\lstnewenvironment{code}{
+\lstset{frame=single,escapeinside=`',
+backgroundcolor=\color{yellow!20},
+basicstyle=\footnotesize\ttfamily}
+}{}
+
+
+\usepackage{hyperref}
+\hypersetup{ % TODO: PDF meta Data
+  pdftitle={Presentation Skill},
+  pdfauthor={Xin Han},
+  pdfpagemode={FullScreen},
+  pdfborder={0 0 0}
+}
+
+%smartdiagram
+\usepackage{smartdiagram}
+\usetikzlibrary{shapes.geometric}
+
+
+% \usepackage{auto-pst-pdf}
+% package to show source code
+
+\definecolor{LightGray}{rgb}{0.9,0.9,0.9}
+\newlength{\pixel}\setlength\pixel{0.000714285714\slidewidth}
+\setlength{\TPHorizModule}{\slidewidth}
+\setlength{\TPVertModule}{\slideheight}
+\newcommand\highlight[1]{\fbox{#1}}
+\newcommand\icite[1]{{\footnotesize [#1]}}
+
+\newcommand\twotonebox[2]{\fcolorbox{pdcolor2}{pdcolor2}
+{#1\vphantom{#2}}\fcolorbox{pdcolor2}{white}{#2\vphantom{#1}}}
+\newcommand\twotoneboxo[2]{\fcolorbox{pdcolor2}{pdcolor2}
+{#1}\fcolorbox{pdcolor2}{white}{#2}}
+\newcommand\vpspace[1]{\vphantom{\vspace{#1}}}
+\newcommand\hpspace[1]{\hphantom{\hspace{#1}}}
+\newcommand\COMMENT[1]{}
+
+\newcommand\placepos[3]{\hbox to\z@{\kern#1
+        \raisebox{-#2}[\z@][\z@]{#3}\hss}\ignorespaces}
+
+\renewcommand{\baselinestretch}{1.2}
+
+
+\newcommand{\draftnote}[3]{
+	\todo[author=#2,color=#1!30,size=\footnotesize]{\textsf{#3}}	}
+% TODO: add yourself here:
+%
+\newcommand{\gangli}[1]{\draftnote{blue}{GLi:}{#1}}
+\newcommand{\xinhan}[1]{\draftnote{green}{XH:}{#1}}
+\newcommand{\gliMarker}
+	{\todo[author=GLi,size=\tiny,inline,color=blue!40]
+	{Gang Li has worked up to here.}}
+\newcommand{\snMarker}
+	{\todo[author=XH,size=\tiny,inline,color=green!40]
+	{Xin Han has worked up to here.}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% title
+% TODO: Customize to your Own Title, Name, Address
+%
+\title{Presentation Skill}
+\author{Xin Han
+\\
+\\Xi'an Shiyou University
+}
+\date{\gitCommitterDate}
+
+
+% Customize the setting of slides
+\pdsetup{
+% TODO: Customize the left footer, and right footer
+rf=\href{http://www.tulip.org.au}{
+Last Changed by: \textsc{\gitCommitterName}\ \gitVtagn-\gitAbbrevHash\ (\gitAuthorDate)
+},
+cf={Presentation Skill},
+}
+
+
+\begin{document}
+
+\maketitle
+
+%\begin{slide}{Overview}
+%\tableofcontents[content=sections]
+%\end{slide}
+
+
+%%==========================================================================================
+%%
+\begin{slide}[toc=,bm=]{Overview}
+\tableofcontents[content=currentsection,type=1]
+\end{slide}
+%%
+%%==========================================================================================
+
+
+\section{TULIP Lab \LaTeX\ Template}
+
+\begin{slide}{powerdot-tuliplab}
+\selectcolormodel{rgb}
+\textit{powerdot-tuliplab} is the \LaTeX\ package used in TULIP Lab for presentation drafting.
+Publishing in \textcolor{orange}{\faGithub:}\url{https://github.com/tulip-lab}.
+\begin{center}
+\smartdiagramset{description title width=2.2cm,
+description text width=11cm,}
+\smartdiagram[descriptive diagram]{
+  {powerdot-tuliplab.sty,{TULIP-Lab Style File}},
+  {tuliplab-P00.tex, {A Simple Presentation Sample with Transitions}},
+  {tuliplab-P01.tex,One Academic Presentation Sample with References List},
+  {tuliplab-P03.tex,One Sample file with PSTrick figures.},
+  {logos/tulip,	Folder of images for slides graphics.}}
+\end{center}
+\end{slide}
+
+\begin{slide}[toc=,bm=]{Installation \& Compiling}
+\selectcolormodel{rgb}
+\begin{description}
+  \item[Installation] Typically this package should be installed automatically with a full \LaTeX\ package,
+      or you can install directly from \textit{ctan.org}.
+      \begin{itemize}
+        \item Copy files the whole folder powerdot-tuliplab to your home directory under ~/texmf/tex/latex/powerdot-tuliplab
+        \item Refresh \LaTeX\ platform
+      \end{itemize}
+  \item[Compiling]You should use the follow chain operators:\\ \begin{center}
+\smartdiagram[sequence diagram]{\LaTeX\ $\to$ DVI,DVI $\to$ PS,PS $\to$ PDF}
+\end{center}
+\end{description}
+\end{slide}
+
+\begin{slide}{TempLaTeX}
+\selectcolormodel{rgb}
+TempLaTeX is the \LaTeX\ package used
+in TULIP Lab for paper drafting.
+It is published in  \textcolor{orange}{\faGithub:}
+\url{https://github.com/tulip-lab/templatex/tree/master/templatex}
+
+\begin{center}
+\smartdiagramset{description title width=2.2cm,
+description text width=13cm,}
+\scalebox{0.7}{\smartdiagram[descriptive diagram]{
+  {report.tex,{the complete report stem file}},
+  {report-htm.tex, {the complete report stem file for tourism and hospitality paper}},
+  {report-acm.tex,the stem file for ACM conference proceedings},
+  {report-ieee.tex,the stem file for IEEE conference proceedings},
+  {report-lncs.tex,the stem file for Springer LNCS conference proceedings;},
+  {slides.tex,one sample file for slides with notes},
+  {poster.tex,one sample poster}}}
+\end{center}
+\end{slide}
+
+\begin{slide}[toc=,bm=]{Set \& Compiling}
+You are expected to use git to host the repository,
+and use \textit{git-flow} to manage
+the collaborative writing platform
+for academic paper authoring.
+
+\begin{center}
+\selectcolormodel{rgb}
+\smartdiagramset{module shape=diamond,
+font=\scriptsize,
+module minimum width=1cm,
+module minimum height=1cm,
+text width=1cm,
+circular distance=2cm,
+circular final arrow disabled=true,
+}
+\smartdiagram[circular diagram:clockwise]{git clone,Update self info,Set gitinfo2,Compile needed}
+\end{center}
+\end{slide}
+
+
+\begin{slide}[method=direct]{Update Self Information}
+Open the \textit{preamble.tex},
+and update with your own information at the following places:
+
+\begin{itemize}
+\item
+Add yourself:
+\begin{lstlisting}[language=TeX]
+\newcommand{\qwu}[1]{\draftnote{darkgreen}{[QWu: #1]}}
+% other colors include blue, red, purple, cyan, darkgreen, etc.
+\end{lstlisting}
+
+\begin{lstlisting}[language=TeX]
+\newcommand{\yourname}[1]{\draftnote{blue}{[You: #1]}}
+% other colors include blue, red, purple, cyan, darkgreen, etc.
+\end{lstlisting}
+
+\item
+Fill the proper information:
+\begin{lstlisting}[language=TeX]
+\hypersetup
+{
+    pdfauthor={\gitAuthorName},
+    pdfsubject={TULIP Lab},
+    pdftitle={},
+    pdfkeywords={TULIP Lab, Data Science},
+    bookmarks=true,
+}
+\end{lstlisting}
+\end{itemize}
+\end{slide}
+
+\begin{slide}[toc=,bm=,method=direct]{Update Self Information}
+Open the \textit{preamble.tex},
+and update with your own information at the following places:
+\begin{itemize}
+  \item Customize Title, Name, Address:
+  \begin{lstlisting}[language=TeX]
+  \title{Presentation Title}
+    \author{Gang Li
+    \\
+    Deakin University
+    % \href{mailto:gangli@acm.org}{gangli@acm.org}
+    % \and % more authors
+    }
+    \end{lstlisting}
+  \item Customize the setting of slides:
+  \begin{lstlisting}[language=TeX]
+  rf=\href{http://www.tulip.org.au}{
+  Last Changed by: \textsc{\gitCommitterName}\
+  \gitVtagn-\gitAbbrevHash\ (\gitAuthorDate)},
+  cf={Presentation Title},}
+  \end{lstlisting}
+\end{itemize}
+\end{slide}
+
+\begin{slide}[method=direct]{Set Gitinfo2}
+The \textit{gitinfo2} package contains a gitinfo folder
+with three executive bash shell scripts:
+post-checkout,post-commit and post-merge.
+\begin{itemize}
+\item  Copy or move these three files 
+       into your repository's \textit{.git/hooks} folder.
+\item Test Run: check out or pull your repository, 
+and it should generate/update the file ./git/gitHeadInfo.gin 
+in your local repository.
+\item Compile the main \LaTeX\ file, and view the PDF.
+\end{itemize}
+\end{slide}
+
+%\begin{slide}{\LaTeX\ Rules}
+%\begin{itemize}
+%  \item 
+%  \item 
+%  \item 
+%\end{itemize}
+%\end{slide}
+
+\section{What to say \& How to say it}
+\begin{slide}[toc=,bm=]{What to say and how to say it}
+Choice and organization of the material to be presented.
+\begin{itemize}
+  \item \textcolor{orange}{Communicate the Key Ideas}\\
+  Make sure that your talk emphasizes the key ideas and
+  skips over what is standard,
+  obvious,
+  or merely complicated.
+  \item Don't get \textcolor{orange}{Bogged Down in Details}\\
+  Details are out of place in an oral presentation.
+  This rule cannot be over-emphasized
+  \item \textcolor{orange}{Structure Your Talk}\\
+  Your presentation should be broken into several distinct parts,
+  each with its own objectives and style.
+
+\end{itemize}
+\end{slide}
+
+\begin{slide}[toc=,bm=]{What to say and how to say it}
+Choice and organization of the material to be presented.
+\begin{itemize}
+
+  \item \textcolor{orange}{Know Your Audience}\\
+  Think through the average level of expertise
+  in your audience and present your results accordingly
+  \item Use an \textcolor{orange}{Organized Approach}\\
+  A simple three-part template for producing a talk is as follows:
+  \begin{itemize}
+    \item Introduction
+    \item Body
+    \item Conclusion
+  \end{itemize}
+  \end{itemize}
+\end{slide}
+
+\begin{slide}{The Introduction}
+It sets the tone for the entire talk.
+It determines whether the audience will prick up their ears,
+or remain slumped in their chairs.
+First impressions are very important.
+\begin{itemize}
+  \item \textcolor{orange}{Define the Problem}\\
+  No matter how difficult and technical the problem;
+  it can usually be described succinctly and
+  accurately in less than five minutes.
+  \item \textcolor{orange}{Motivate the Audience}\\
+  Explain why the problem is so important.
+  How does the problem fit into the larger picture?
+  What are its applications?
+  What makes the problem nontrivial?
+  \item \textcolor{orange}{Introduce Terminology}\\
+  All terms must be introduced early.
+
+
+\end{itemize}
+\end{slide}
+
+\begin{slide}[toc=,bm=]{The Introduction}
+\begin{itemize}
+
+\item \textcolor{orange}{Discuss Earlier Work}\\
+  Compared and explain why your work is different
+  from past work.
+
+\item \textcolor{orange}{Emphasize the Contributions of your Paper}\\
+  Make sure that you explicitly and succinctly state the
+  contributions made by your paper.
+  Often it is the only thing that audience carry
+  away from the talk.
+
+\item \textcolor{orange}{Consider putting your Conclusion} in the Introduction \\
+    Take a bold step and put a short conclusion
+    in the introduction.
+    Let everyone know up front the direction
+    you are headed so that the audience can
+     focus on the details.
+\end{itemize}
+\end{slide}
+
+\begin{slide}{The Main Body}
+This contains the meat of your presentation,
+and is the point at which the attention of
+the audience will start to waver
+if you messed up your Introduction.
+Consider the following suggestions.
+\begin{itemize}
+  \item \textcolor{orange}{Abstract the Major Results.}\\
+  Describe the key results of the presentation.
+  You will probably have to get a little technical
+  here but do so gradually and carefully.
+
+  \item  \textcolor{orange}{Explain the Significance of the Results}\\
+  Focus on anything unexpected or crucial to supporting your conclusions.
+
+  \item  \textcolor{orange}{Sketch} a Proof of the Crucial Results\\
+   State the hypotheses and experimental design
+   as simply as possible.
+\end{itemize}
+\end{slide}
+
+\begin{slide}[toc=,bm=]{The Body}
+\begin{itemize}
+  \item \textcolor{orange}{Use Props and Pictures}\\
+  ``Things seen are mightier than things heard.''
+  Be sure to add figures and photos to your slides,
+  where appropriate.
+
+  \item Don't \textcolor{orange}{Inflict Pain} on the Audience\\
+  Never waste an audience's time taking them
+  through a step-by-step history of your project.
+
+  \item \textcolor{orange}{Avoid Complex Tables}\\
+  Don't cram a lot of numbers
+  into small tables on your slides. Never.
+
+  \item Have a \textcolor{orange}{Purpose and Conclusion}\\
+  Consider putting a written conclusion at
+  the bottom of each key slide.
+  Each slide should have a point that is being made.
+  \end{itemize}
+\end{slide}
+
+\begin{slide}{The Conclusion}
+Your aim here is to restate the lessons learned in a short,
+concise manner.
+\begin{itemize}
+  \item \textcolor{orange}{Hindsight is Clearer} than Foresight\\
+  You can now make observations that
+  would have been confusing if they were introduced earlier.
+  Use this opportunity to refer to statements that
+  you have made in the previous three sections and
+  weave them into a coherent synopsis.
+
+  \item Indicate that your Talk is \textcolor{orange}{Over}\\
+  An acceptable way to do this is to say ``Thank you.
+  Are there any questions?''
+
+\end{itemize}
+\end{slide}
+
+\section{Getting Through to the Audience}
+\begin{slide}[toc=,bm=]{Getting Through to the Audience}
+The next major hurdle is when you find yourself actually
+standing in front of the audience.
+Faulty delivery can ruin even a wellprepared talk.
+
+\begin{itemize}
+  \item \textcolor{orange}{Practice Your Talk}\\
+   The practice must be verbal, not just mental.
+   For many reasons,
+   a couple verbal practice rounds is one of the most
+   effective ways to improve your communication effectiveness.
+
+  \item \textcolor{orange}{Use Repetition}\\
+  The tried and true strategy for presentations is to:
+  ``Tell them what you're going to tell them (the Introduction).
+  Tell them (the Body).
+  And then tell them what you told them (the Conclusion).''
+
+  \item \textcolor{orange}{Convey Enthusiasm, Excitement,
+  Confidence}\\
+  Believe in what you are doing.
+  Let the audience know that you have something very
+  interesting to share with them.
+\end{itemize}
+\end{slide}
+
+\begin{slide}[toc=,bm=]{Getting Through to the Audience}
+\begin{itemize}
+\item \textcolor{orange}{Control Your Voice}\\
+  Speak clearly and with sufficient volume.
+  Don't speak in a monotone.
+  Avoid utterances.
+  Avoid fashionable turns of phrase.
+  Avoid hype.
+
+  \item \textcolor{orange}{Minimize Language Difficulties}\\
+  It is a good idea to
+  get a native speaker to look over your
+  transparencies before you deliver the talk.
+  Use a prepared text,
+  if necessary.
+
+  \item Don't Start Your \textcolor{orange}{Talk with an Apology}\\
+  The speaker may be doing nothing more than
+  trying to deal with his/her own nervousness,
+  but as a result the audience now has a lower
+  opinion and expectation of the speaker and their presentation.
+\end{itemize}
+\end{slide}
+
+\section{Visual and Aural Aids}
+\begin{slide}[toc=,bm=]{Visual and Aural Aids}
+Now that you have a well-prepared talk and can deliver it with style.
+\begin{itemize}
+  \item \textcolor{orange}{Use Color Effectively}\\
+  The use of color can enhance a presentation,
+  particularly when used in moderation in the
+  figures and diagrams.
+  Only use high contrast color combinations.
+
+  \item \textcolor{orange}{Use Pictures and Tables}\\
+  Use photos and drawings whenever possible,
+  but only when they illustrate the point
+  you are trying to make.
+
+  \item \textcolor{orange}{Familiarize Yourself} with the Stage \\
+  Introduce yourself to the session chair if you haven't already.
+  If you have 35mim slides,
+  be sure they are mounted properly and are in the correct order.
+\end{itemize}
+\end{slide}
+
+\section{Question Time}
+
+\begin{slide}[toc=,bm=]{Question Time}
+\begin{description}
+  \item[Genuine request] It should cause you no difficulties if you are adequately prepared.\pause
+  \item[Selfish question] It is \textcolor{orange}{polite to take a few seconds} to compose a reply that directly or indirectly compliments the questioner.\pause
+  \item[Malicious question]Be \textcolor{orange}{prepared},
+  be polite,
+  and avoid getting involved in a \textcolor{orange}{lengthy exchange}.
+\end{description}
+\end{slide}
+
+%%==========================================================================================
+%
+%\begin{slide}[toc=,bm=]{Questions?}
+%\begin{center}
+%\begin{figure}
+%    \animategraphics[autoplay, loop, height=1\textheight]{5}{figures//gif//question//q_}{1}{30}
+%\end{figure}
+%\end{center}
+%\end{slide}
+%%
+%%==========================================================================================
+
+
+%%==========================================================================================
+% TODO: Contact Page
+\begin{wideslide}[toc=,bm=]{Contact Information}
+\centering
+\vspace{\stretch{1}}
+\twocolumn[
+lcolwidth=0.35\linewidth,
+rcolwidth=0.65\linewidth
+]
+{
+% \centerline{\includegraphics[scale=.2]{tulip-logo.eps}}
+}
+{
+\vspace{\stretch{1}}
+Xin Han\\
+School of Computer Science\\
+Xi'an Shiyou University, China
+
+\begin{description}
+ \item[\textcolor{orange}{\faEnvelope}] \href{mailto:xin.han@tulip.org.au}
+ {\textsc{\footnotesize{xin.han@tulip.org.au}}}
+
+ \item[\textcolor{orange}{\faHome}] \href{http://www.tulip.org.au}
+ {\textsc{\footnotesize{Team for Universal Learning and Intelligent Processing}}}
+\end{description}
+}
+\vspace{\stretch{1}}
+\end{wideslide}
+
+\end{document}
+
+\endinput
