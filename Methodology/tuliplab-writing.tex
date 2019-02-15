@@ -54,8 +54,7 @@ cf={TULIP Academy},
 	\begin{itemize}
 		\item Generally, 
 		\begin{itemize}
-			\item to convey your idea
-        	\item from your head to your reader’s head
+			\item to convey your idea from your head to your reader’s head
     	\end{itemize}
     \end{itemize}
     \begin{itemize}
@@ -127,9 +126,9 @@ rcolwidth=0.45\linewidth
 
 \begin{slide}[toc=,bm=]{When do you start writing?}
 	\begin{itemize}
-		\item Begin to write mannuscipt when the algorithm and the experiments are clear. You have a clear framework then.
-		\item The algorithm design and performance and experimental results can be adjusted in the process of writing.
-		\item However, some terminology such as the proposed algorithm name and notation abpout relevant data must be determined.
+		\item Begin to write mannuscipt when the algorithm and the experiments are clear. 
+		\item The algorithm performance and experimental results can be adjusted in the process of writing.
+		\item However, some terms such as the proposed algorithm name and notation about relevant data must be determined.
 			\begin{itemize}
 				\item Algorithm name need to be catchy: FPDZxs, for example, is not as catchy as Fredos.
 			\end{itemize}		
@@ -255,7 +254,7 @@ rcolwidth=0.6\linewidth
 			\end{itemize}
 		\item In Tulip
 			\begin{itemize}
-				\item \textcolor{orange}{The first author} is the one who writes the paper even if the question/idea/experiment are done by someone else's.
+				\item \textcolor{orange}{The first author} is the one who writes the paper even if the question/idea/experiment are put forward by someone else's.
 				\item Generally, if a tulip member completes his/her experiment and paper writing, he/she will be the first author in most cases.
 			\end{itemize}
 	\end{itemize}	
@@ -264,9 +263,157 @@ rcolwidth=0.6\linewidth
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%==========================================================================================
-% \section{Readers' expectations}
+\section{Readers' expectations}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{slide}[toc=,bm=]{Readers' expectation for a sentence}
+	\begin{itemize}
+		\item Readers expect familiar information at the beginning of a sentence.
+			\begin{itemize}
+				\item \textcolor{mygreen!50}{The accuracy of the model structures is given by TM-score. In case of a perfect match to 3experimental structure, TM-score would be 1.}
+				\item \textcolor{orange}{The accuracy of the model structures is measured by TM-score, which is equal to 1 if there is a perfect match to experimental structure.}
+			\end{itemize}
+		\item The golden rule for writing the start of a sentence is to ask yourself this question: have I introduce this concept before?	
+	\end{itemize}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{Readers' expectation for a sentence}
+	\begin{itemize}
+		\item Readers expect the action verb immediately after the subject.
+			\begin{itemize}
+				\item \textcolor{mygreen!50}{The smallest URFs (URFA6L), a 207-nucleotide (nt) reading frame overlapping out of phase the NH2-terminal portion of the adenosinetrip hosphatase (ATPase) subinit 6 gene has been identified as the animal equivalent of the recently discovered yeast H+-ATPase subunit 8 gene.}
+				\item \textcolor{orange}{The smallest of the URFs is URFA6L, a 207-nucleotide (nt) reading frame overlapping out of phase the NH2-terminal portion of the adenosinetriphosphatase (ATPase) subinit 6 Gene; it has been identified as the animal equivalent of the recently discovered yeast H+-ATPase subunit 8 gene.}
+			\end{itemize}
+		\item It is much better to have a short subject followed immediately by a verb and long object.	
+	\end{itemize}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{Readers' expectation for a sentence}
+	\begin{itemize}
+		\item Readers expect that each sentence makes only one point, which is emphasized at the end of the sentence.
+			\begin{itemize}
+				\item \textcolor{mygreen!50}{The enthalpy of hydrogen bond formation between the nucleoside bases 2-deoxyguanosine (dG) and 2-deoxycytidine (dC) has been determined by direct measurement.}
+				\item \textcolor{orange}{We have directly measured the enthalpy of hydrogen bond formation between the nucleoside bases 2-deoxyguanosine (dG) and 2-deoxycytidine (dC).}
+			\end{itemize}
+		\item Each sentence makes only one point, which is emphasized at the end of the sentence. It also avoids the “large head and small foot” problem.	
+	\end{itemize}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{Readers’ expectations of a paragraph}
+	\begin{itemize}
+		\item Each paragraph should only tell one story about one subject.
+	\end{itemize}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{Readers’ expectations of a table/figure}
+	\begin{itemize}
+		\item It is expected that more familiar \(old\) information in the left and new information on the right.
+	\end{itemize}
+
+\twocolumn[lcolwidth=0.4\linewidth,
+rcolwidth=0.4\linewidth
+]
+{
+	\begin{table}
+	\fontsize{11pt}{11pt}\selectfont
+	\setlength{\abovecaptionskip}{0pt}
+	\setlength{\belowcaptionskip}{12pt}
+	\centering
+	\caption{sample 1}
+		\begin{tabular}{c|c}
+				\toprule
+				 \textbf{Temp($^\circ$C)} & \textbf{Time} \\ 
+				\midrule
+				 25  & 0 \\
+				 27  & 3 \\
+				 29  & 6 \\
+				 32  & 12 \\
+				 32  & 15 \\
+				\bottomrule
+		\end{tabular}
+	\end{table}
+}
+{
+	\begin{table}
+	\fontsize{11pt}{11pt}\selectfont
+	\setlength{\abovecaptionskip}{0pt}
+	\setlength{\belowcaptionskip}{12pt}
+	\centering
+	\caption{\textcolor{orange}{sample 2}}
+		\begin{tabular}{c|c}
+				\toprule
+				 \textbf{Time} & \textbf{Temp($^\circ$C)}\\ 
+				\midrule
+				 0  & 25 \\
+				 3  & 27 \\
+				 6  & 29 \\
+				 12  & 32 \\
+				 15  & 32 \\
+				\bottomrule
+		\end{tabular}
+	\end{table}
+}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{Readers’ expectations of a table/figure}
+	\begin{itemize}
+		\item Another rule for tables is to save the best for the last.
+	\end{itemize}
+	\begin{table}
+	\fontsize{11pt}{11pt}\selectfont
+	\setlength{\abovecaptionskip}{0pt}
+	\setlength{\belowcaptionskip}{12pt}
+	\centering
+	\caption{sample 3}
+		\begin{tabular}{c|c|c|c|c}
+				\toprule
+				 Benchmark & SALIGN & Lindahl & PROSPECTOR 3 & LiveBench 8\\ 
+				 \midrule
+				 SPARKS & 53.1\% & 325.9 & 529.0 & 38.3 \\
+				 SPARKS2 & 54.9\% & 341.0 & 591.0 & 40.7 \\
+				 \textcolor{orange}{This work} & \textcolor{orange}{56.6\%} & \textcolor{orange}{349.2} & \textcolor{orange}{601.9} & \textcolor{orange}{42.2} \\
+				\bottomrule
+		\end{tabular}
+	\end{table}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{Readers’ expectations of a table/figure }
+	\begin{itemize}
+		\item Use solid lines for your work and dashed lines for other studies. 
+		\item Symbols are mixed with open and filled from top to bottom to maximize the difference between various curves. 
+		\item Spell out the titles for X and Y axes (rather than short-hands).
+	\end{itemize}
+	\begin{figure}	
+		\includegraphics[scale=0.6]{./figures/writing-skills/figure-expectation.eps}
+	\end{figure}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%==========================================================================================
 \section{Tools}
@@ -275,13 +422,13 @@ rcolwidth=0.6\linewidth
 
 \begin{slide}[toc=,bm=]{Tools}
 	\begin{itemize}
-		\item \href{http://www.phrasebank.manchester.ac.uk}{Academic phrasebank (www.phrasebank.manchester.ac.uk)}
-		\item \href{http://latexqc.ieee.org/}{Latex check (latexqc.ieee.org)}
+		\item \href{http://www.phrasebank.manchester.ac.uk}{Academic phrasebank (\emph{www.phrasebank.manchester.ac.uk})}
+		\item \href{http://latexqc.ieee.org/}{Latex check (\emph{{latexqc.ieee.org}})}
 		\item English Writing check 
 			\begin{itemize}
-				\item  \href{https://app.grammarly.com/}{grammerly (app.grammarly.com)}
-		    	\item  \href{http://www.netspeak.org/}{netspeak (www.netspeak.org)}
-		    	\item  \href{http://linggle.com/}{linggle (linggle.com)}
+				\item  \href{https://app.grammarly.com/}{grammerly (\emph{{app.grammarly.com}})}
+		    	\item  \href{http://www.netspeak.org/}{netspeak (\emph{{www.netspeak.org}})}
+		    	\item  \href{http://linggle.com/}{linggle (\emph{{linggle.com}})}
 		    \end{itemize}
 	\end{itemize}
 
@@ -292,7 +439,6 @@ rcolwidth=0.6\linewidth
 			\includegraphics[width=0.5\textwidth]{./figures/writing-skills/netspeak.eps}
 		}
 	\end{figure}
-
 \end{slide}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
