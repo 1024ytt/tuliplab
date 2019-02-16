@@ -192,7 +192,11 @@ description text width=11cm,}
 \end{center}
 \end{description}
 \end{slide}
+%%
+%%==========================================================================================
 
+%%==========================================================================================
+%%
 \begin{slide}{TempLaTeX}
 \selectcolormodel{rgb}
 TempLaTeX is the \LaTeX\ package used
@@ -213,7 +217,11 @@ description text width=13cm,}
   {poster.tex,one sample poster}}}
 \end{center}
 \end{slide}
+%%
+%%==========================================================================================
 
+%%==========================================================================================
+%%
 \begin{slide}[toc=,bm=]{Set \& Compiling}
 You are expected to use git to host the repository,
 and use \textit{git-flow} to manage
@@ -233,8 +241,11 @@ circular final arrow disabled=true,
 \smartdiagram[circular diagram:clockwise]{git clone,Update self info,Set gitinfo2,Compile needed}
 \end{center}
 \end{slide}
+%%
+%%==========================================================================================
 
-
+%%==========================================================================================
+%%
 \begin{slide}[method=direct]{Update Self Information}
 Open the \textit{preamble.tex},
 and update with your own information at the following places:
@@ -266,7 +277,11 @@ Fill the proper information:
 \end{lstlisting}
 \end{itemize}
 \end{slide}
+%%
+%%==========================================================================================
 
+%%==========================================================================================
+%%
 \begin{slide}[toc=,bm=,method=direct]{Update Self Information}
 Open the \textit{preamble.tex},
 and update with your own information at the following places:
@@ -290,30 +305,121 @@ and update with your own information at the following places:
   \end{lstlisting}
 \end{itemize}
 \end{slide}
+%%
+%%==========================================================================================
 
+%%==========================================================================================
+%%
 \begin{slide}[method=direct]{Set Gitinfo2}
-The \textit{gitinfo2} package contains a gitinfo folder
+The package contains a gitinfo folder
 with three executive bash shell scripts:
-post-checkout,post-commit and post-merge.
+\textcolor{orange}{post-checkout},
+\textcolor{orange}{post-commit} and
+\textcolor{orange}{post-merge}.
+
 \begin{itemize}
-\item  Copy or move these three files 
-       into your repository's \textit{.git/hooks} folder.
-\item Test Run: check out or pull your repository, 
-and it should generate/update the file ./git/gitHeadInfo.gin 
-in your local repository.
-\item Compile the main \LaTeX\ file, and view the PDF.
+    \item  Copy or move these three files
+           into your repository's \textit{.git/hooks} folder.
+    \item Test Run: check out or pull your repository,
+          and it should generate/update the file \textit{./git/gitHeadInfo.gin}
+          in your local repository.
+    \item Compile the main \LaTeX\ file, and view the PDF.
+\end{itemize}
+
+\end{slide}
+%%
+%%==========================================================================================
+
+%%==========================================================================================
+%%
+\begin{slide}[method=direct]{Basic Usage}
+\begin{itemize}
+  \item Document setting:
+  \begin{lstlisting}[language=TeX]
+  \documentclass[
+     size=14pt,
+     paper=smartboard,  %a4paper, smartboard, screen
+     mode=present, 		%present, handout, print
+     display=notes, 	% slidesnotes, notes, slides
+     style=tuliplab,  	% TULIP Lab style
+     pauseslide,
+     fleqn,leqno]{powerdot}
+ \end{lstlisting}
+ The \textit{print mode} can be used to print the slides,
+ it deletes the overlays and transition effects.
+ Other modes are \textit{present},
+ which is the default mode for presentations;
+ and \textit{handout} which
+ produces a black and white overview of the slides,
+ printing two slides per page.
+ \end{itemize}
+ \end{slide}
+%%
+%%==========================================================================================
+
+%%==========================================================================================
+%%
+\begin{slide}[toc=,bm=,method=direct]{Basic Usage}
+\begin{itemize}
+  \item Section \& Slide:
+  \begin{lstlisting}[language=TeX]
+    % section: title takes up full slide
+    \section{First section}
+    \begin{slide}{Slide Title}
+        \begin{itemize}
+        \item This is an item
+        \item Second item
+        \item Third item
+        \end{itemize}
+    \end{slide}
+  \end{lstlisting}
+  Pretty much anything you can do in a normal \LaTeX\
+      document:figures, 
+      tables, 
+      equations, 
+      normal text~{et.~al.}
+      between \textbackslash begin\{slide\} 
+      and \textbackslash end\{slide\}
+  \end{itemize}
+  \end{slide}
+%%
+%%==========================================================================================
+
+%%==========================================================================================
+%%
+\begin{slide}[toc=,bm=,method=direct]{Basic Usage}
+ \begin{itemize}
+  \item Adding notes:
+  \begin{lstlisting}[language=TeX]
+  \documentclass[
+     size=14pt,
+     paper=smartboard,  %a4paper, smartboard, screen
+     mode=present, 		%present, handout, print
+     display=notes, 	% slidesnotes, notes, slides
+     style=tuliplab,  	% TULIP Lab style
+     pauseslide,
+     fleqn,leqno]{powerdot}
+    %
+    \begin{slide}{Slide Title}
+        \begin{itemize}
+        \item This is an item
+        \end{itemize}
+    \end{slide}
+    \begin{note}{About items}
+        Mention that lists of items can be customised.
+    \end{note}
+  \end{lstlisting}
+  display = slidesnotes print the notes and the slides,
+  while = slides that prints only the slides.
 \end{itemize}
 \end{slide}
-
-%\begin{slide}{\LaTeX\ Rules}
-%\begin{itemize}
-%  \item 
-%  \item 
-%  \item 
-%\end{itemize}
-%\end{slide}
+%%
+%%==========================================================================================
 
 \section{What to say \& How to say it}
+
+%%==========================================================================================
+%%
 \begin{slide}[toc=,bm=]{What to say and how to say it}
 Choice and organization of the material to be presented.
 \begin{itemize}
@@ -331,7 +437,11 @@ Choice and organization of the material to be presented.
 
 \end{itemize}
 \end{slide}
+%%
+%%==========================================================================================
 
+%%==========================================================================================
+%%
 \begin{slide}[toc=,bm=]{What to say and how to say it}
 Choice and organization of the material to be presented.
 \begin{itemize}
@@ -348,7 +458,11 @@ Choice and organization of the material to be presented.
   \end{itemize}
   \end{itemize}
 \end{slide}
+%%
+%%==========================================================================================
 
+%%==========================================================================================
+%%
 \begin{slide}{The Introduction}
 It sets the tone for the entire talk.
 It determines whether the audience will prick up their ears,
@@ -366,33 +480,39 @@ First impressions are very important.
   What makes the problem nontrivial?
   \item \textcolor{orange}{Introduce Terminology}\\
   All terms must be introduced early.
-
-
 \end{itemize}
 \end{slide}
+%%
+%%==========================================================================================
 
+%%==========================================================================================
+%%
 \begin{slide}[toc=,bm=]{The Introduction}
 \begin{itemize}
 
-\item \textcolor{orange}{Discuss Earlier Work}\\
-  Compared and explain why your work is different
-  from past work.
+    \item \textcolor{orange}{Discuss Earlier Work}\\
+      Compared and explain why your work is different
+      from past work.
 
-\item \textcolor{orange}{Emphasize the Contributions of your Paper}\\
-  Make sure that you explicitly and succinctly state the
-  contributions made by your paper.
-  Often it is the only thing that audience carry
-  away from the talk.
+    \item \textcolor{orange}{Emphasize the Contributions of your Paper}\\
+      Make sure that you explicitly and succinctly state the
+      contributions made by your paper.
+      Often it is the only thing that audience carry
+      away from the talk.
 
-\item \textcolor{orange}{Consider putting your Conclusion} in the Introduction \\
-    Take a bold step and put a short conclusion
-    in the introduction.
-    Let everyone know up front the direction
-    you are headed so that the audience can
-     focus on the details.
+    \item \textcolor{orange}{Consider putting your Conclusion} in the Introduction \\
+        Take a bold step and put a short conclusion
+        in the introduction.
+        Let everyone know up front the direction
+        you are headed so that the audience can
+         focus on the details.
 \end{itemize}
 \end{slide}
+%%
+%%==========================================================================================
 
+%%==========================================================================================
+%%
 \begin{slide}{The Main Body}
 This contains the meat of your presentation,
 and is the point at which the attention of
@@ -413,7 +533,11 @@ Consider the following suggestions.
    as simply as possible.
 \end{itemize}
 \end{slide}
+%%
+%%==========================================================================================
 
+%%==========================================================================================
+%%  
 \begin{slide}[toc=,bm=]{The Body}
 \begin{itemize}
   \item \textcolor{orange}{Use Props and Pictures}\\
@@ -435,7 +559,11 @@ Consider the following suggestions.
   Each slide should have a point that is being made.
   \end{itemize}
 \end{slide}
+%%
+%%==========================================================================================
 
+%%==========================================================================================
+%%  
 \begin{slide}{The Conclusion}
 Your aim here is to restate the lessons learned in a short,
 concise manner.
