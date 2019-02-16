@@ -36,9 +36,14 @@ cf={TULIP Academy},
 \begin{document}
 
 \maketitle
+%%==========================================================================================
+
+\begin{slide}[toc=,bm=]{Overview}
+\tableofcontents[content=currentsection,type=1]
+\end{slide}
 
 %%==========================================================================================
-\section{Perface}
+\section{Introduction}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -51,20 +56,11 @@ cf={TULIP Academy},
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{slide}[toc=,bm=]{The purpose of your paper is...}
-	\begin{itemize}
-		\item Generally, 
-		\begin{itemize}
-			\item to convey your idea from your head to your reader’s head
-    	\end{itemize}
-    \end{itemize}
     \begin{itemize}
-    	\item Specifically,
-    	\begin{itemize}
-	    	\item A good idea
-	    	\item Research motivation
-	    	\item Method to solve the problem
-	    	\item Experimental results to prove the effectiveness of the method
-    	\end{itemize}
+	    \item A research problem
+	    \item Research motivation
+	    \item Method to solve the problem
+	    \item Experimental results to prove the effectiveness of the method
 	\end{itemize}
 \end{slide}
 
@@ -103,11 +99,29 @@ rcolwidth=0.45\linewidth
 
 \begin{slide}[toc=,bm=]{Some questions you should have in mind before writing}
 	\begin{itemize}
-		\item The \textcolor{orange}{problem} to be investigated
-		\item The \textcolor{orange}{challenges/limits/barriers} of the existing solutions (3-4 challenges)
-		\item Why could \textcolor{orange}{the proposed approach avoids these challenges}
-		\item How to \textcolor{orange}{prove} this method has solved these challenges	
-		\item Clearly state \textcolor{orange}{contributions} corresponding to the challenges above	
+		\item \textcolor{red!40}{If you can answer these questions very clearly, then you can start writing your paper.}
+		\begin{itemize}
+			\item \textcolor{orange}{Research Problem}
+				\begin{itemize}
+					\item The problem to be investigated
+				\end{itemize}
+			\item \textcolor{orange}{Related Work}
+				\begin{itemize}
+					\item The challenges/limits/barriers of the existing solutions (3-4 challenges)
+				\end{itemize}
+			\item \textcolor{orange}{Research Gaps}
+				\begin{itemize}
+					\item Why could the proposed approach avoids these challenges
+				\end{itemize}
+			\item \textcolor{orange}{Rationale}
+				\begin{itemize}
+					\item How to prove this method has solved these challenges
+				\end{itemize}	
+			\item \textcolor{orange}{Contribution}
+				\begin{itemize}
+					\item Clearly state contributions corresponding to the challenges above	
+				\end{itemize} 		
+		\end{itemize}
 	\end{itemize}	
 \end{slide}
 
@@ -117,7 +131,7 @@ rcolwidth=0.45\linewidth
 	\begin{itemize}
 		\item Select similar 1\~{}2 articles as templates 
 			\begin{itemize}
-				\item different types of articles are better to prevent plagiarism
+				\item Different types of articles are better to prevent plagiarism
 			\end{itemize}	
 	\end{itemize}	
 \end{slide}
@@ -128,7 +142,7 @@ rcolwidth=0.45\linewidth
 	\begin{itemize}
 		\item Begin to write mannuscipt when the algorithm and the experiments are clear. 
 		\item The algorithm performance and experimental results can be adjusted in the process of writing.
-		\item However, some terms such as the proposed algorithm name and notation about relevant data must be determined.
+		\item However, some terms such as the proposed algorithm name and notations about relevant data must be determined.
 			\begin{itemize}
 				\item Algorithm name need to be catchy: FPDZxs, for example, is not as catchy as Fredos.
 			\end{itemize}		
@@ -148,16 +162,14 @@ rcolwidth=0.6\linewidth
 ]
 {
 	\begin{itemize}
-		\item Title
-		\item Authors
+		\item Title and Authors
 		\item Abstract
 		\item Introduction
-		\item Relate work
+		\item Related Work
 		\item Methods
 		\item Experimental Results
-		\item Discussion
-		\item Acknowledgement
-		\item Cited references		
+		\item Conclution
+		\item Cited References		
 	\end{itemize}
 	}
 {
@@ -177,6 +189,7 @@ rcolwidth=0.6\linewidth
 				\item Are all new terms defined? 
 				\item If you read this section for the first time, do you have enough information to reproduce all the work?
 			\end{itemize}
+		\item The terms should be consistent throughout the paper.
 	\end{itemize}	
 \end{slide}
 
@@ -205,28 +218,28 @@ rcolwidth=0.6\linewidth
 		\item The first sentence: link the first sentence to the title of the paper
 		\item The first paragraph
 			\begin{itemize}
-				\item some of the terms used in the title
-				\item the field of research and its importance
+				\item Some of the terms used in the title
+				\item The field of research and its importance
 			\end{itemize}
 		\item The second paragraph
 			\begin{itemize}
-				\item a critical survey of the field: solution, or partial solution, the existing unsolved problem, the difficulties or challenges
+				\item A critical survey of the field: solution, or partial solution, the existing unsolved problem, the difficulties or challenges
 			\end{itemize}
 		\item The third paragraph
 			\begin{itemize}
-				\item the proposed solution, the results, possible implications
+				\item The proposed solution, the results, possible implications
 			\end{itemize}
 	\end{itemize}	
 \end{slide}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{slide}[toc=,bm=]{Discussion section}
+\begin{slide}[toc=,bm=]{Conclution section}
 	\begin{itemize}
 		\item Separate the results from their interpretations, implications and conclusion
 			\begin{itemize}
-				\item start with a review of results obtained and their interpretations 
-				\item various trials and tests done, the effects of parameter changes on results, comparisons to other studies, problems yet to be solved, future or on-going work
+				\item Start with a review of results obtained and their interpretations 
+				\item Various trials and tests done, the effects of parameter changes on results, comparisons to other studies, problems yet to be solved, future or on-going work
 			\end{itemize}
 	\end{itemize}	
 \end{slide}
@@ -235,11 +248,11 @@ rcolwidth=0.6\linewidth
 
 \begin{slide}[toc=,bm=]{Abstract section}
 	\begin{itemize}
-		\item the importance of the subject area (linked backward to title)
-		\item the problem to be investigated
-		\item the uniqueness of your approach 
-		\item the significance
-		\item implications and impact of the results
+		\item The importance of the subject area (linked backward to title)
+		\item The problem to be investigated
+		\item The uniqueness of your approach 
+		\item The significance
+		\item Implications and impact of the results
 	\end{itemize}	
 \end{slide}
 
@@ -250,7 +263,7 @@ rcolwidth=0.6\linewidth
 		\item CS specification
 			\begin{itemize}
 				\item The person who came up with the problem/the idea is \textcolor{orange}{the first author}. 
-				\item Other people who do the experiments, wirte the literature, even if write completely, can only be other authors, maybe second.
+				\item Other people who do the experiments, wirte the paper, even if write completely, can only be other authors, maybe second.
 			\end{itemize}
 		\item In Tulip
 			\begin{itemize}
@@ -278,8 +291,6 @@ rcolwidth=0.6\linewidth
 	\end{itemize}
 \end{slide}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{slide}[toc=,bm=]{Readers' expectation for a sentence}
@@ -292,8 +303,6 @@ rcolwidth=0.6\linewidth
 		\item It is much better to have a short subject followed immediately by a verb and long object.	
 	\end{itemize}
 \end{slide}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -310,15 +319,11 @@ rcolwidth=0.6\linewidth
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{slide}[toc=,bm=]{Readers’ expectations of a paragraph}
 	\begin{itemize}
 		\item Each paragraph should only tell one story about one subject.
 	\end{itemize}
 \end{slide}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -336,7 +341,7 @@ rcolwidth=0.4\linewidth
 	\setlength{\abovecaptionskip}{0pt}
 	\setlength{\belowcaptionskip}{12pt}
 	\centering
-	\caption{sample 1}
+	\caption{Sample 1}
 		\begin{tabular}{c|c}
 				\toprule
 				 \textbf{Temp($^\circ$C)} & \textbf{Time} \\ 
@@ -356,7 +361,7 @@ rcolwidth=0.4\linewidth
 	\setlength{\abovecaptionskip}{0pt}
 	\setlength{\belowcaptionskip}{12pt}
 	\centering
-	\caption{\textcolor{orange}{sample 2}}
+	\caption{\textcolor{orange}{Sample 2}}
 		\begin{tabular}{c|c}
 				\toprule
 				 \textbf{Time} & \textbf{Temp($^\circ$C)}\\ 
@@ -372,8 +377,6 @@ rcolwidth=0.4\linewidth
 }
 \end{slide}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{slide}[toc=,bm=]{Readers’ expectations of a table/figure}
@@ -385,7 +388,7 @@ rcolwidth=0.4\linewidth
 	\setlength{\abovecaptionskip}{0pt}
 	\setlength{\belowcaptionskip}{12pt}
 	\centering
-	\caption{sample 3}
+	\caption{Sample 3}
 		\begin{tabular}{c|c|c|c|c}
 				\toprule
 				 Benchmark & SALIGN & Lindahl & PROSPECTOR 3 & LiveBench 8\\ 
@@ -397,8 +400,6 @@ rcolwidth=0.4\linewidth
 		\end{tabular}
 	\end{table}
 \end{slide}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -420,15 +421,15 @@ rcolwidth=0.4\linewidth
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{slide}[toc=,bm=]{Tools}
+\begin{slide}[toc=,bm=]{Writing Tools}
 	\begin{itemize}
 		\item \href{http://www.phrasebank.manchester.ac.uk}{Academic phrasebank (\emph{www.phrasebank.manchester.ac.uk})}
 		\item \href{http://latexqc.ieee.org/}{Latex check (\emph{{latexqc.ieee.org}})}
 		\item English Writing check 
 			\begin{itemize}
-				\item  \href{https://app.grammarly.com/}{grammerly (\emph{{app.grammarly.com}})}
-		    	\item  \href{http://www.netspeak.org/}{netspeak (\emph{{www.netspeak.org}})}
-		    	\item  \href{http://linggle.com/}{linggle (\emph{{linggle.com}})}
+				\item  \href{https://app.grammarly.com/}{Grammerly (\emph{{app.grammarly.com}})}
+		    	\item  \href{http://www.netspeak.org/}{Netspeak (\emph{{www.netspeak.org}})}
+		    	\item  \href{http://linggle.com/}{Linggle (\emph{{linggle.com}})}
 		    \end{itemize}
 	\end{itemize}
 
@@ -443,23 +444,36 @@ rcolwidth=0.4\linewidth
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{slide}[toc=,bm=]{Academic Accounts}
+	\begin{itemize}
+		\item As a researcher, you must maintain your academic accounts so that other researchers can find you and see your research achievements.
+			\begin{itemize}
+				\item  \href{https://orcid.org/}{ORCID (\emph{{orcid.org}})}
+		    	\item  \href{https://scholar.google.com/intl/en/scholar/citations.html}{Google Scholar (\emph{{scholar.google.com}})}
+		    \end{itemize}
+	\end{itemize}
+\end{slide}
+
 %%==========================================================================================
 \section{Reference}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{slide}[toc=,bm=]{Reference}
-	\begin{itemize}
-		\item The Science of Scientific Writing. George D. Gopen and Judith A. Swan
-		\item Recipe for a Quality Scientific Paper: Fulfill Readers! and Reviewers! Expectations. Yaoqi Zhou, Indiana University School of Informatics, Indiana University-Purdue University at Indianapolis Center for Computational Biology and Bioinformatics, Indiana University School of Medicine
-		\item How to Write a Paper. Mike Ashby, Engineering Department, University of Cambridge, Cambridge 6rd Edition, April 2005
-		\item How to write a great research paper. Simon Peyton Jones, Microsoft Research, Cambridge
-	\end{itemize}
+	\bibliographystyle{plain}
+	\nobibliography{tulip-writing}	
+	\begin{enumerate}
+		\item \bibentry{George}
+		\item \bibentry{Yaoqi}
+		\item \bibentry{Mike}
+		\item \bibentry{Simon}
+	\end{enumerate}
 \end{slide}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % %%==========================================================================================
+
 \end{document}
 
 \endinput
