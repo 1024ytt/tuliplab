@@ -108,7 +108,7 @@ basicstyle=\footnotesize\ttfamily}
 
 
 \newcommand{\draftnote}[3]{
-	\todo[author=#2,color=#1!30,size=\footnotesize]{\textsf{#3}}	}
+	\todo[author=#2,color=#1!30,size=\footnotesize]{\textsf{#3}}}
 % TODO: add yourself here:
 %
 \newcommand{\gangli}[1]{\draftnote{blue}{GLi:}{#1}}
@@ -170,11 +170,11 @@ Publishing in \textcolor{orange}{\faGithub:}\url{https://github.com/tulip-lab}.
 \smartdiagramset{description title width=2.2cm,
 description text width=11cm,}
 \smartdiagram[descriptive diagram]{
-  {powerdot-tuliplab.sty,{TULIP-Lab Style File}},
-  {tuliplab-P00.tex, {A Simple Presentation Sample with Transitions}},
-  {tuliplab-P01.tex,One Academic Presentation Sample with References List},
-  {tuliplab-P03.tex,One Sample file with PSTrick figures.},
-  {logos/tulip,	Folder of images for slides graphics.}}
+  {\textit{powerdot-tuliplab.sty},{TULIP-Lab Style File}},
+  {\textit{tuliplab-P00.tex}, {A Simple Presentation Sample with Transitions}},
+  {\textit{tuliplab-P01.tex},One Academic Presentation Sample with References List},
+  {\textit{tuliplab-P03.tex},One Sample file with PSTrick figures.},
+  {\textit{logos/tulip},Folder of images for slides graphics.}}
 \end{center}
 \end{slide}
 
@@ -184,7 +184,7 @@ description text width=11cm,}
   \item[Installation] Typically this package should be installed automatically with a full \LaTeX\ package,
       or you can install directly from \textit{ctan.org}.
       \begin{itemize}
-        \item Copy files the whole folder powerdot-tuliplab to your home directory under ~/texmf/tex/latex/powerdot-tuliplab
+        \item Copy files the whole folder powerdot-tuliplab to your home directory under \textit{~/texmf/tex/latex/powerdot-tuliplab}
         \item Refresh \LaTeX\ platform
       \end{itemize}
   \item[Compiling]You should use the follow chain operators:\\ \begin{center}
@@ -208,13 +208,13 @@ It is published in  \textcolor{orange}{\faGithub:}
 \smartdiagramset{description title width=2.2cm,
 description text width=13cm,}
 \scalebox{0.7}{\smartdiagram[descriptive diagram]{
-  {report.tex,{the complete report stem file}},
-  {report-htm.tex, {the complete report stem file for tourism and hospitality paper}},
-  {report-acm.tex,the stem file for ACM conference proceedings},
-  {report-ieee.tex,the stem file for IEEE conference proceedings},
-  {report-lncs.tex,the stem file for Springer LNCS conference proceedings;},
-  {slides.tex,one sample file for slides with notes},
-  {poster.tex,one sample poster}}}
+  {\textit{report.tex},{the complete report stem file}},
+  {\textit{report-htm.tex}, {the complete report stem file for tourism and hospitality paper}},
+  {\textit{report-acm.tex},the stem file for ACM conference proceedings},
+  {\textit{report-ieee.tex},the stem file for IEEE conference proceedings},
+  {\textit{report-lncs.tex},the stem file for Springer LNCS conference proceedings;},
+  {\textit{slides.tex},one sample file for slides with notes},
+  {\textit{poster.tex},one sample poster}}}
 \end{center}
 \end{slide}
 %%
@@ -254,13 +254,11 @@ and update with your own information at the following places:
 \item
 Add yourself:
 \begin{lstlisting}[language=TeX]
-\newcommand{\qwu}[1]{\draftnote{darkgreen}{[QWu: #1]}}
-% other colors include blue, red, purple, cyan, darkgreen, etc.
-\end{lstlisting}
-
-\begin{lstlisting}[language=TeX]
 \newcommand{\yourname}[1]{\draftnote{blue}{[You: #1]}}
 % other colors include blue, red, purple, cyan, darkgreen, etc.
+\newcommand{\gliMarker}
+	{\todo[author=GLi,size=\tiny,inline,color=blue!40]
+	{Gang Li has worked up to here.}}
 \end{lstlisting}
 
 \item
@@ -374,12 +372,12 @@ with three executive bash shell scripts:
     \end{slide}
   \end{lstlisting}
   Pretty much anything you can do in a normal \LaTeX\
-      document:figures, 
-      tables, 
-      equations, 
+      document:figures,
+      tables,
+      equations,
       normal text~{et.~al.}
-      between \textbackslash begin\{slide\} 
-      and \textbackslash end\{slide\}
+      between \textit{\textbackslash begin\{slide\}
+      and \textbackslash end\{slide\}}
   \end{itemize}
   \end{slide}
 %%
@@ -409,18 +407,18 @@ with three executive bash shell scripts:
         Mention that lists of items can be customised.
     \end{note}
   \end{lstlisting}
-  display = slidesnotes print the notes and the slides,
-  while = slides that prints only the slides.
+  \textit{display = slidesnotes} print the notes and the slides,
+  while \textit{display = slides} prints only the slides.
 \end{itemize}
 \end{slide}
 %%
 %%==========================================================================================
 
-\section{What to say \& How to say it}
+\section{What \& How to Present}
 
 %%==========================================================================================
 %%
-\begin{slide}[toc=,bm=]{What to say and how to say it}
+\begin{slide}[toc=,bm=]{What and How to Present}
 Choice and organization of the material to be presented.
 \begin{itemize}
   \item \textcolor{orange}{Communicate the Key Ideas}\\
@@ -428,7 +426,7 @@ Choice and organization of the material to be presented.
   skips over what is standard,
   obvious,
   or merely complicated.
-  \item Don't get \textcolor{orange}{Bogged Down in Details}\\
+  \item \textcolor{orange}{Don't get Bogged Down in Details}\\
   Details are out of place in an oral presentation.
   This rule cannot be over-emphasized
   \item \textcolor{orange}{Structure Your Talk}\\
@@ -442,14 +440,14 @@ Choice and organization of the material to be presented.
 
 %%==========================================================================================
 %%
-\begin{slide}[toc=,bm=]{What to say and how to say it}
+\begin{slide}[toc=,bm=]{What and How to Present}
 Choice and organization of the material to be presented.
 \begin{itemize}
 
   \item \textcolor{orange}{Know Your Audience}\\
   Think through the average level of expertise
   in your audience and present your results accordingly
-  \item Use an \textcolor{orange}{Organized Approach}\\
+  \item \textcolor{orange}{Use an Organized Approach}\\
   A simple three-part template for producing a talk is as follows:
   \begin{itemize}
     \item Introduction
@@ -500,7 +498,7 @@ First impressions are very important.
       Often it is the only thing that audience carry
       away from the talk.
 
-    \item \textcolor{orange}{Consider putting your Conclusion} in the Introduction \\
+    \item \textcolor{orange}{Consider putting your Conclusion in the Introduction}  \\
         Take a bold step and put a short conclusion
         in the introduction.
         Let everyone know up front the direction
@@ -528,7 +526,7 @@ Consider the following suggestions.
   \item  \textcolor{orange}{Explain the Significance of the Results}\\
   Focus on anything unexpected or crucial to supporting your conclusions.
 
-  \item  \textcolor{orange}{Sketch} a Proof of the Crucial Results\\
+  \item  \textcolor{orange}{Sketch a Proof of the Crucial Results}\\
    State the hypotheses and experimental design
    as simply as possible.
 \end{itemize}
@@ -537,7 +535,7 @@ Consider the following suggestions.
 %%==========================================================================================
 
 %%==========================================================================================
-%%  
+%%
 \begin{slide}[toc=,bm=]{The Body}
 \begin{itemize}
   \item \textcolor{orange}{Use Props and Pictures}\\
@@ -545,7 +543,7 @@ Consider the following suggestions.
   Be sure to add figures and photos to your slides,
   where appropriate.
 
-  \item Don't \textcolor{orange}{Inflict Pain} on the Audience\\
+  \item \textcolor{orange}{Don't Inflict Pain on the Audience}\\
   Never waste an audience's time taking them
   through a step-by-step history of your project.
 
@@ -553,7 +551,7 @@ Consider the following suggestions.
   Don't cram a lot of numbers
   into small tables on your slides. Never.
 
-  \item Have a \textcolor{orange}{Purpose and Conclusion}\\
+  \item \textcolor{orange}{Have a Purpose and Conclusion}\\
   Consider putting a written conclusion at
   the bottom of each key slide.
   Each slide should have a point that is being made.
@@ -563,7 +561,7 @@ Consider the following suggestions.
 %%==========================================================================================
 
 %%==========================================================================================
-%%  
+%%
 \begin{slide}{The Conclusion}
 Your aim here is to restate the lessons learned in a short,
 concise manner.
@@ -575,7 +573,7 @@ concise manner.
   you have made in the previous three sections and
   weave them into a coherent synopsis.
 
-  \item Indicate that your Talk is \textcolor{orange}{Over}\\
+  \item \textcolor{orange}{Indicate that your Talk is Over}\\
   An acceptable way to do this is to say ``Thank you.
   Are there any questions?''
 
@@ -625,12 +623,24 @@ Faulty delivery can ruin even a wellprepared talk.
   Use a prepared text,
   if necessary.
 
-  \item Don't Start Your \textcolor{orange}{Talk with an Apology}\\
+  \item \textcolor{orange}{Don't Start Your Talk with an Apology}\\
   The speaker may be doing nothing more than
   trying to deal with his/her own nervousness,
   but as a result the audience now has a lower
   opinion and expectation of the speaker and their presentation.
 \end{itemize}
+\end{slide}
+
+\section{Question Time}
+
+\begin{slide}[toc=,bm=]{Question Time}
+\begin{description}
+  \item[Genuine request] It should cause you no difficulty if you are adequately prepared.\pause
+  \item[Selfish question] It is \textcolor{orange}{polite to take a few seconds} to compose a reply that directly or indirectly compliments the questioner.\pause
+  \item[Malicious question]Be \textcolor{orange}{prepared},
+  be polite,
+  and avoid getting involved in a \textcolor{orange}{lengthy exchange}.
+\end{description}
 \end{slide}
 
 \section{Visual and Aural Aids}
@@ -648,25 +658,12 @@ Now that you have a well-prepared talk and can deliver it with style.
   but only when they illustrate the point
   you are trying to make.
 
-  \item \textcolor{orange}{Familiarize Yourself} with the Stage \\
+  \item \textcolor{orange}{Familiarize Yourself with the Stage} \\
   Introduce yourself to the session chair if you haven't already.
   If you have 35mim slides,
   be sure they are mounted properly and are in the correct order.
 \end{itemize}
 \end{slide}
-
-\section{Question Time}
-
-\begin{slide}[toc=,bm=]{Question Time}
-\begin{description}
-  \item[Genuine request] It should cause you no difficulties if you are adequately prepared.\pause
-  \item[Selfish question] It is \textcolor{orange}{polite to take a few seconds} to compose a reply that directly or indirectly compliments the questioner.\pause
-  \item[Malicious question]Be \textcolor{orange}{prepared},
-  be polite,
-  and avoid getting involved in a \textcolor{orange}{lengthy exchange}.
-\end{description}
-\end{slide}
-
 %%==========================================================================================
 %
 %\begin{slide}[toc=,bm=]{Questions?}
