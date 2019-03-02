@@ -7,6 +7,7 @@
  pauseslide,
  fleqn,leqno]{powerdot}{}
 
+\usepackage{courier}
  %%==========================================================================================
 \input{mod-preamble}
 %%==========================================================================================
@@ -112,15 +113,15 @@ rcolwidth=0.45\linewidth
 				\end{itemize}
 			\item \textcolor{orange}{Related Work}
 				\begin{itemize}
-					\item The challenges/limits/barriers of the existing solutions (3-4 challenges)
+					\item The existing solutions
 				\end{itemize}
 			\item \textcolor{orange}{Research Gaps}
 				\begin{itemize}
-					\item Why could the proposed approach avoids these challenges
+					\item The challenges/limits/barriers of the research problem (3-4 challenges)
 				\end{itemize}
 			\item \textcolor{orange}{Rationale}
 				\begin{itemize}
-					\item How to prove this method has solved these challenges
+					\item Why could the proposed approach avoids these challenges
 				\end{itemize}	
 			\item \textcolor{orange}{Contribution}
 				\begin{itemize}
@@ -157,7 +158,7 @@ rcolwidth=0.45\linewidth
 	\begin{itemize}
 		\item Select similar 1\~{}2 articles as templates 
 			\begin{itemize}
-				\item Different types of articles are better to prevent plagiarism
+				\item Papers from a different area are better to prevent plagiarism
 			\end{itemize}	
 	\end{itemize}	
 \end{slide}
@@ -170,7 +171,7 @@ rcolwidth=0.45\linewidth
 		\item The algorithm performance and experimental results can be adjusted in the process of writing.
 		\item However, some terms such as the proposed algorithm name and notations about relevant data must be determined.
 			\begin{itemize}
-				\item Algorithm name need to be catchy: FPDZxs, for example, is not as catchy as Fredos.
+				\item Algorithm name need to be catchy: \texttt{FPDZxs}, for example, is not as catchy as \texttt{Fredos}.
 			\end{itemize}		
 	\end{itemize}	
 \end{slide}
@@ -195,7 +196,7 @@ rcolwidth=0.6\linewidth
 		\item Methods and rationale
 		\item Experimental Results
 		\item Conclution
-		\item Cited References		
+		\item References		
 	\end{itemize}
 	}
 {
@@ -216,6 +217,9 @@ rcolwidth=0.6\linewidth
 				\item If you read this section for the first time, do you have enough information to reproduce all the work?
 			\end{itemize}
 		\item The terms should be consistent throughout the paper.
+			\begin{itemize}
+				\item For example, \texttt{attributes}, \texttt{factors}, \texttt{variables}, \texttt{features} are all fine, but you can only choose one in a paper.
+			\end{itemize}
 	\end{itemize}	
 \end{slide}
 
@@ -306,7 +310,7 @@ rcolwidth=0.6\linewidth
 
 \begin{slide}[toc=,bm=]{Authors}
 	\begin{itemize}
-		\item CS specification
+		\item CS General Practise
 			\begin{itemize}
 				\item The person who came up with the problem/the idea is \textcolor{orange}{the first author}. 
 				\item Other people who do the experiments, wirte the paper, even if write completely, can only be other authors, maybe second.
@@ -315,7 +319,7 @@ rcolwidth=0.6\linewidth
 			\begin{itemize}
 				\item The first author is the one who writes the paper even if the question/idea/experiment are put forward by someone else's.
 				\item Generally, if a tuliplab member completes his/her experiment and paper writing, he/she will be the first author in most cases.
-				\item The authors are all contributors to the paper, maybe including funders of the paper.
+				\item The authors are all contributors to the paper, maybe including the fund supporter of the paper.
 			\end{itemize}
 	\end{itemize}
 \end{slide}
@@ -503,14 +507,32 @@ rcolwidth=0.4\linewidth
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{slide}[toc=,bm=]{Latex template}
+\begin{slide}[toc=,bm=]{\LaTeX~  template}
 	\begin{itemize}
-		\item As a member in tuliplab, you should get familiar with tuliplab's templatex
+		\item As a member in Tulip Lab, you should get familiar with tuliplab's templatex
 			\begin{itemize}
-				\item  \href{https://github.com/tulip-lab/templatex}{Latex template (\emph{{https://github.com/tulip-lab/templatex}})}
+				\item  \href{https://github.com/tulip-lab/templatex}{\LaTeX~ template (\emph{{https://github.com/tulip-lab/templatex}})}
 		    \end{itemize}
 	\end{itemize}
 \end{slide}
+
+%%==========================================================================================
+\section{After Writing}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{slide}[toc=,bm=]{Rules in Tulip Lab}
+	\begin{itemize}
+		\item The full paper should be completed before the deadline of the target conference, and we need finish the following in a month
+			\begin{itemize}
+				\item In Tulip Lab, tools like Turnitin are recommended to detect plagiarism.
+				\item All reviewers of FLIP (07) in Tulip Lab are required to review the paper, and then compare their comments with that of experts after external reviewing. 
+				\item Submitting the paper after confirmation of the director.		
+			\end{itemize}
+	\end{itemize}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%==========================================================================================
 \section{Reference}
@@ -528,9 +550,9 @@ rcolwidth=0.4\linewidth
 	\end{enumerate}
 \end{slide}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% %%==========================================================================================
+%%==========================================================================================
 
 \end{document}
 
