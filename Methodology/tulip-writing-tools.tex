@@ -59,6 +59,12 @@ fleqn,leqno]{powerdot}
 \usepackage{caption}
 \usepackage{fontawesome}
 
+
+%smartdiagram
+\usepackage{smartdiagram}
+\usetikzlibrary{shapes.geometric}
+
+
 \captionsetup[table]{skip=10pt}
 \usepackage{listings}
 \lstset{frameround=fttt, 
@@ -118,7 +124,7 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 	\textit{\LaTeX}, 
 	\textit{TeXstudio} 
 	and \textit{Zetero}.\\~\\
-	With the help of these tolls,
+	With the help of these tools,
 	your research study/work will be \textbf{academic}, 
 	\textbf{accurate} and \textbf{efficient}.
 \end{slide}
@@ -242,9 +248,32 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 %\end{slide}
 %
 %\begin{slide}{Templates}
-	\href{https://github.com/tulip-lab/templatex/tree/develop}{TULIP}
+	\textcolor{orange}{\faGithub:}\href{https://github.com/tulip-lab/templatex}{TULIP}
 	 provides templates for slides, 
 	 paper and thesis.\\
+	 
+	 \begin{table}
+	 	\caption{Tulip Templates}
+	 	\begin{tabular}{|c|c|}
+	 		\toprule
+	 		%				\centering
+	 		\textbf{Template}  & \textbf{Description} \\
+	 		\midrule
+	 		\textbf{powerdot-tuliplab} & LaTeX powerdot style and sample files for Presentation in TULIP Lab\\
+	 		\textbf{pptx} & templates for Microsoft Powerpoint \\
+	 		\textbf{templatex} & LaTeX Template for Paper Writing \\
+	 		\textbf{thesistemplate} & LaTeX Template for Thesis Writing \\
+	 		
+	 	\end{tabular}
+	 \end{table}
+
+\end{slide}
+%%==========================================================================================
+
+
+%%==========================================================================================
+
+\begin{slide}{Rules for Template}
 	To use these templates, 
 	there are some rules you need to follow. \\
 	\begin{itemize}
@@ -256,6 +285,39 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 		most 80 characters.
 	\end{itemize}
 \end{slide}
+%%==========================================================================================
+
+
+%%==========================================================================================
+
+\begin{slide}{Templatex}
+	\selectcolormodel{rgb}
+	\begin{center}
+		\smartdiagramset{description title width=2.2cm,
+			description text width=13cm,}
+		\scalebox{0.7}{\smartdiagram[descriptive diagram]{
+				{\textit{mainbody.tex}, the main body of report-*.tex},
+				{\textit{report-*.tex}, the stem file for different conference proceedings},
+				{\textit{preamble.tex}, stylish file},
+				{\textit{slides.tex}, one sample file for slides with notes},
+				{\textit{poster.tex}, one sample poster}}}
+	\end{center}
+\end{slide}
+%%==========================================================================================
+
+
+%%==========================================================================================
+%
+%\begin{slide}{Templatex}
+%	mainbody.tex
+%	Introduction
+%	Preliminaries
+%	Method
+%	Experiment and Analysis
+%	Conclusions
+%	*Acknowledge
+%	
+%\end{slide}
 
 %%==========================================================================================
 
