@@ -92,6 +92,17 @@ basicstyle=\footnotesize\ttfamily}
 \usepackage{fouriernc}
 \usepackage{hyperref}
 
+% TODO: add yourself here:
+%
+\newcommand{\gangli}[1]{\draftnote{blue}{GLi:}{#1}}
+\newcommand{\ziweihou}[1]{\draftnote{green}{ZH:}{#1}}
+\newcommand{\gliMarker}
+{\todo[author=GLi,size=\tiny,inline,color=blue!40]
+	{Gang Li has worked up to here.}}
+\newcommand{\ZHouMarker}
+{\todo[author=ZHou,size=\tiny,inline,color=green!40]
+	{Ziwei Hou has worked up to here.}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % title
 % TODO: Customize to your Own Title, Name, Address
@@ -159,7 +170,7 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 
 \section{Github \& Bitbucket}
 
-\begin{slide}{\textit{Github} VS \textit{Bitbucket}}	
+\begin{slide}{\textit{Github} VS. \textit{Bitbucket}}	
 	\begin{itemize}
 		\item \textbf{\textit{Github}}\\ 
 		\textit{GitHub} Inc. 
@@ -211,6 +222,29 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 
 
 %%==========================================================================================
+\begin{slide}{\textit{Bitbucket}}
+	For individual research, 
+	one \textit{Bitbucket} team is required to be created for you and your research partners.\\~\\
+	\selectcolormodel{rgb}
+	\begin{center}
+		\smartdiagramset{description title width=2.2cm,
+			set color list={blue!15,blue!22,blue!29,blue!36},
+			%			description title text width = 2.5cm,
+			description text width = 15cm,
+			descriptive items y sep = 2.5cm,
+			module minimum height = 2cm,}
+		\scalebox{0.7}{\smartdiagram[descriptive diagram]{
+				{\textbf{1}, Create own \textit{Bitbucket} account},
+				{\textbf{2}, Create one new team and initialize one repository},
+				{\textbf{3}, Set up your repository\\
+				invite your partners and authorize them},
+				}}
+	\end{center}
+\end{slide}
+%%==========================================================================================
+
+
+%%==========================================================================================
 
 \begin{slide}{\textit{SmartGit}}
 	\textit{SmartGit} is a graphical Git client with support for SVN and 
@@ -232,41 +266,6 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 
 
 %%==========================================================================================
-
-
-\begin{slide}{Git Setup \& Collaborate Work}
-	
-	\begin{center}
-		\begin{table}
-		\centering
-		\begin{tabular}{ll}
-			\toprule
-			\textbf{local \textit{texmf} tree} & \textbf{One Repository/Paper} \\
-			\midrule
-			\tabitem Put the \textit{.bib} in local \textit{texmf} tree & \tabitem GitInfo2\\
-			\tabitem Add local \textit{texmf} tree to git & \tabitem \textit{LaTeXDiff} and 
-			\textit{Git-LaTeXDiff} \\[.5\normalbaselineskip]
-			\bottomrule
-		\end{tabular}
-	\end{table}
-	\end{center}
-	
-	\begin{itemize}
-		\item Maintain a full editing history, 
-		and quantify the line by line contributions from co-authors
-		\item Tag, 
-		Release and Branch the project
-		\item Easily creating a PDF with revision details
-		\item Adding comments by hiding the source in the \textit{LaTeX} source
-		\item Multiple authors writing at the same time, 
-		on the same file
-	\end{itemize}
-\end{slide}
-%%==========================================================================================
-
-
-%%==========================================================================================
-
 \begin{slide}{GitFlow}	
 	\begin{figure}
 		\centering
@@ -324,7 +323,6 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 
 
 %%==========================================================================================
-
 \begin{slide}[toc=,bm=]{Rules}
 	\begin{enumerate}
 		\item Put only those files under version control that are directly modified by the user.
@@ -343,7 +341,6 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 
 
 \section{\LaTeX~ \& TeXstudio}
-
 \begin{slide}{Introduce \LaTeX}
 	\begin{itemize}
 		\item \textit{\LaTeX} is a high-quality typesetting system; 
@@ -412,7 +409,6 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 
 
 %%==========================================================================================
-
 \begin{slide}[toc=,bm=]{Templatex}
 	\begin{itemize}
 		\item mainbody.tex
@@ -430,14 +426,27 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 		\end{itemize}
 	\end{itemize}
 \end{slide}
-
 %%==========================================================================================
 
 
-
 %%==========================================================================================
-
-\begin{slide}{Setting up \& Compiling}
+\begin{slide}{Setup \textit{\LaTeX} with \textit{Git}}
+	
+	\begin{center}
+		\begin{table}
+			\centering
+			\begin{tabular}{ll}
+				\toprule
+				\textbf{local \textit{texmf} tree} & \textbf{One Repository/Paper} \\
+				\midrule
+				\tabitem Put the \textit{.bib} in local \textit{texmf} tree & \tabitem GitInfo2\\
+				\tabitem Add local \textit{texmf} tree to git & \tabitem \textit{LaTeXDiff} and 
+				\textit{Git-LaTeXDiff} \\[.5\normalbaselineskip]
+				\bottomrule
+			\end{tabular}
+		\end{table}
+	\end{center}
+	
 	\selectcolormodel{rgb}
 	You are expected to use git to host the repository, 
 	and use git-flow to manage the collaborative 
@@ -445,24 +454,24 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 	\begin{center}
 		\smartdiagramset{description title width=2.2cm,
 			set color list={blue!15,blue!22,blue!29,blue!36},
-%			description title text width = 2.5cm,
+			%			description title text width = 2.5cm,
 			description text width = 15cm,
-			descriptive items y sep = 2.5cm,
+			descriptive items y sep = 2cm,
 			module minimum height = 2cm,}
 		\scalebox{0.7}{\smartdiagram[descriptive diagram]{
 				{\textbf{1}, Create one new repository in your git platform},
 				{\textbf{2}, Update with your own information in \textit{preamble.tex} \\
-%				\begin{center}
-%						\begin{itemize}
-						\texttt{Comment} \texttt{Marker} \& \texttt{Author}
-%					\end{itemize}
-%				\end{center}		
+					%				\begin{center}
+					%						\begin{itemize}
+					\texttt{Comment} \texttt{Marker} \& \texttt{Author}
+					%					\end{itemize}
+					%				\end{center}		
 				},
 				{\textbf{3}, Customize the file names 		
 					\begin{itemize}
 						\item no need to change file names such as report.tex etc.
 						\item add or replace \textit{yourbib.bib} with your research bib file.
-					\end{itemize}},
+				\end{itemize}},
 				{\textbf{4}, Check out the repository to local drive, 
 					and set up the local environment for \textit{gitinfo2} package.
 					\begin{itemize}
@@ -470,15 +479,30 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 						\item post-commit
 						\item post-merge
 					\end{itemize}
-				}}}
+		}}}
 	\end{center}
+%	\begin{itemize}
+%		\item Maintain a full editing history, 
+%		and quantify the line by line contributions from co-authors
+%		\item Tag, 
+%		Release and Branch the project
+%		\item Easily creating a PDF with revision details
+%		\item Adding comments by hiding the source in the \textit{LaTeX} source
+%		\item Multiple authors writing at the same time, 
+%		on the same file
+%	\end{itemize}
 \end{slide}
-
 %%==========================================================================================
 
 
 %%==========================================================================================
+\begin{slide}{Compiling}
 
+\end{slide}
+%%==========================================================================================
+
+
+%%==========================================================================================
 \begin{slide}[toc=,bm=]{Rules for Template}
 	To use these templates, 
 	there are some rules you need to follow. \\
@@ -501,22 +525,18 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 %%==========================================================================================
 
 
-
 %%==========================================================================================
-
 \begin{slide}{\LaTeX + Git Workflow}
 	\begin{figure}
 		\centering
-		\includegraphics[width=0.65\linewidth]{figures//writing-tools//gitlatex-flow03.eps}
+		\includegraphics[width=0.5\linewidth]{figures//writing-tools//gitlatex-flow03.eps}
 	\end{figure}
 \end{slide}
-
 %%==========================================================================================
 
 
 
 %%==========================================================================================
-
 \begin{slide}[toc=,bm=]{Rules for \LaTeX + Git Workflow}
 	\begin{enumerate}
 		\item Frequent commits of minor changes: 
@@ -549,13 +569,11 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 	\end{enumerate}
 	
 \end{slide}
-
 %%==========================================================================================
 
 
 
 %%==========================================================================================
-
 \begin{slide}{TeXstudio}
 	\textit{TeXstudio} is a cross-platform open-source \LaTeX editor. 
 	Its features include an interactive spelling checker, 
@@ -582,7 +600,6 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 \end{slide}
 
 \section{Zotero}
-
 \begin{slide}{Zotero}
 	\textit{Zotero} is a free and open-source reference management software to manage 
 	bibliographic data and related research materials.\\
@@ -598,7 +615,6 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 
 
 %%==========================================================================================
-
 % TODO: Contact Page
 \begin{wideslide}[toc=,bm=]{Contact Information}
 	\centering
