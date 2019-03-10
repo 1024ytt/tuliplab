@@ -599,8 +599,13 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 
 
 %%==========================================================================================
-\begin{slide}[toc=,bm=]{Usage of the Templates - Slides \& Poster}
-	Use \textit{.eps} as your picture file.\\
+\begin{slide}[toc=,bm=,method=direct]{Usage of the Templates - Poster \& Slides}
+	In \textit{poster.tex}\\
+	\begin{lstlisting}[language=TeX]
+		\block{Introduction}{} 
+		\column{0.5} %Second column starts here
+	\end{lstlisting}
+	For both \textit{poster.tex} and \textit{slides.tex}, use \textit{.eps} as your picture file.\\
 	\begin{itemize}
 		\item Encapsulated PostScrip is a vector format designed for printing to PostScript printers and imagesetters. 
 		It is considered the best choice of graphics format for high resolution printing of illustrations.\\
@@ -688,8 +693,8 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 	It does not provide \LaTeX itself – 
 	the user must choose a distribution of \LaTeX and install it first.\\~\\
 	
-	To start the slides template, 
-	there is one configuration you need to set up.
+	To start the templates, 
+	you need to set up compiler in configuration.
 	
 	\begin{figure}
 		\centering
@@ -701,12 +706,12 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 
 
 %%==========================================================================================
-%\begin{slide}{Hints}
-%	\begin{figure}
-%		\centering
-%		\includegraphics[width=0.45\linewidth]{figures//writing-tools//problems.eps}
-%	\end{figure}
-%\end{slide}
+\begin{slide}{Hints}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.45\linewidth]{figures//writing-tools//problems.eps}
+	\end{figure}
+\end{slide}
 %%==========================================================================================
 
 
