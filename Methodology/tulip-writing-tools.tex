@@ -60,6 +60,8 @@ fleqn,leqno]{powerdot}
 \usepackage{fontawesome}
 \usepackage{metalogo}
 \usepackage{dtk-logos}
+\usepackage{natbib}
+\usepackage{cprotect}
 
 %smartdiagram
 \usepackage{smartdiagram}
@@ -76,22 +78,29 @@ fleqn,leqno]{powerdot}
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
 
 \captionsetup[table]{skip=10pt}
+
+\usepackage{textcomp}
 \usepackage{listings}
-\lstset{frameround=fttt, 
-frame=trBL, 
-stringstyle=\ttfamily,
-backgroundcolor=\color{yellow!20},
-basicstyle=\footnotesize\ttfamily}
+\lstset{frameround=fttt,
+	frame=trBL,
+	stringstyle=\ttfamily,
+	backgroundcolor=\color{yellow!20},
+	basicstyle=\footnotesize\ttfamily}
 \lstnewenvironment{code}{
-\lstset{frame=single,escapeinside=`',
-backgroundcolor=\color{yellow!20},
-basicstyle=\footnotesize\ttfamily}
+	\lstset{frame=single,escapeinside=`',
+		backgroundcolor=\color{yellow!20},
+		basicstyle=\footnotesize\ttfamily}
 }{}
 
 
 \usepackage{fouriernc}
 \usepackage{hyperref}
-
+\hypersetup{ % TODO: PDF meta Data
+	pdftitle={Writing Tools},
+	pdfauthor={Ziwei Hou},
+	pdfpagemode={FullScreen},
+	pdfborder={0 0 0}
+}
 % TODO: add yourself here:
 %
 \newcommand{\gangli}[1]{\draftnote{blue}{GLi:}{#1}}
@@ -139,7 +148,6 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 
 
 %%==========================================================================================
-
 \section{Academic Writing Tools}
 \begin{slide}{Academic Writing Tools}
 	\selectcolormodel{rgb}
@@ -276,32 +284,13 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 
 
 %%==========================================================================================
-
-\begin{slide}[toc=,bm=]{GitFlow}
-	\twocolumn{
-		\begin{figure}
-			\centering
-			\includegraphics[width=0.75\linewidth]{figures//writing-tools//gitflow2.eps}
-		\end{figure}
-	}{
-		\begin{figure}
-			\centering
-			\includegraphics[width=0.75\linewidth]{figures//writing-tools//gitflow3.eps}
-		\end{figure}
-	}	
-	
-\end{slide}
-%%==========================================================================================
-
-
-%%==========================================================================================
-
 \begin{slide}[toc=,bm=]{GitFlow Branches}
+	Top two important branches
 	\begin{itemize}
-		\item \textcolor{orange}{\textit{master} branch} should be treated as the main flow of your work, 
+		\item \textcolor{orange}{\textit{Master} branch} should be treated as the main flow of your work, 
 		and it should be always production ready, 
 		and in a ready to submit state.
-		\item \textcolor{orange}{\textit{develop} branch} is parallel to the master branch, 
+		\item \textcolor{orange}{\textit{Dsevelop} branch} is parallel to the master branch, 
 		it is the main branch where the source code of HEAD always reflects a state with the latest 
 		delivered development changes for the next release.
 	\end{itemize}
@@ -323,6 +312,24 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 
 
 %%==========================================================================================
+\begin{slide}[toc=,bm=]{GitFlow}
+	\twocolumn{
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.75\linewidth]{figures//writing-tools//gitflow2.eps}
+		\end{figure}
+	}{
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.75\linewidth]{figures//writing-tools//gitflow3.eps}
+		\end{figure}
+	}	
+	
+\end{slide}
+%%==========================================================================================
+
+
+%%==========================================================================================
 \begin{slide}[toc=,bm=]{Rules}
 	\begin{enumerate}
 		\item Put only those files under version control that are directly modified by the user.
@@ -338,8 +345,6 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 
 
 %%==========================================================================================
-
-
 \section{\LaTeX~ \& TeXstudio}
 \begin{slide}{Introduce \LaTeX}
 	\begin{itemize}
@@ -379,8 +384,8 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 \end{slide}
 %%==========================================================================================
 
-%%==========================================================================================
 
+%%==========================================================================================
 \begin{slide}{Templatex}
 	\selectcolormodel{rgb}
 	\begin{center}
@@ -409,23 +414,23 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 
 
 %%==========================================================================================
-\begin{slide}[toc=,bm=]{Templatex}
-	\begin{itemize}
-		\item mainbody.tex
-		\begin{itemize}
-			\item 	Introduction
-			\item 	Preliminaries
-			\item 	Method
-			\item 	Experiment and Analysis
-			\item 	Conclusions
-			\item 	*Acknowledge
-		\end{itemize}
-		\item preamble.tex
-		\begin{itemize}
-			\item 
-		\end{itemize}
-	\end{itemize}
-\end{slide}
+%\begin{slide}[toc=,bm=]{Templatex}
+%	\begin{itemize}
+%		\item mainbody.tex
+%		\begin{itemize}
+%			\item 	Introduction
+%			\item 	Preliminaries
+%			\item 	Method
+%			\item 	Experiment and Analysis
+%			\item 	Conclusions
+%			\item 	*Acknowledge
+%		\end{itemize}
+%		\item preamble.tex
+%		\begin{itemize}
+%			\item 
+%		\end{itemize}
+%	\end{itemize}
+%\end{slide}
 %%==========================================================================================
 
 
@@ -496,8 +501,86 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 
 
 %%==========================================================================================
-\begin{slide}{Compiling}
+%\begin{slide}[toc=,bm=]{Compiling}
+%For thesis \& poster templates, set the compiler to use PdfLaTex.\\
+%For Slides templates, since it uses .eps files, set the compiler as LaTex.DVIPS.PS2PDF
+%\end{slide}
+%%==========================================================================================
 
+
+%%==========================================================================================
+\begin{slide}[toc=,bm=,method=direct]{Usage of the Templates - Thesis}
+	\begin{itemize}
+		\item Comments Settings:
+		\begin{lstlisting}[language=TeX]
+			\includecomment{JournalOnly}  
+			\includecomment{ConferenceOnly}  
+			\includecomment{TulipStyle}
+		\end{lstlisting}
+		You may adjust the comment types in \textit{report.tex}. \\~\\
+		\item Make comments:
+		\begin{lstlisting}[language=TeX]
+			\todo[fancyline]{Testing.}
+			and this is for~\cref{sec-conclusions}.
+			\todo[noline]{A note with no line back to the text.}%
+			\gangli{This is comment from Gang.}
+			\qwu{Response from QW}
+			\listoftodos
+		\end{lstlisting}
+	\end{itemize}
+	You can find all comments in the \textit{list of Todos} at the end of thesis.\\
+%	\begin{figure}
+%		\centering
+%		\includegraphics[width=0.5\linewidth]{figures//writing-tools//thesis-todo.eps}
+%	\end{figure}
+\end{slide}
+%%==========================================================================================
+
+
+%%==========================================================================================
+\begin{slide}[toc=,bm=]{Usage of the Templates - Thesis}
+	Sections are provided in \textit{mainbody.tex} with properly order\\
+	\begin{itemize}
+		\item Introduction
+		\item Preliminaries
+		\item Method
+		\item Experiment and Analysis
+		\item Conclusions
+		\item Acknowledgment
+	\end{itemize}
+	However, you can choose which sections to go. 
+\end{slide}
+%%==========================================================================================
+
+
+%%==========================================================================================
+\begin{slide}[toc=,bm=]{Usage of the Templates - Thesis}
+	Citation:\\
+	\selectcolormodel{rgb}
+	\begin{center}
+		\smartdiagramset{description title width=2.2cm,
+			set color list={blue!15,blue!22,blue!29,blue!36},
+			%			description title text width = 2.5cm,
+			description text width = 15cm,
+			descriptive items y sep = 2cm,
+			module minimum height = 2cm,}
+		\scalebox{0.7}{\smartdiagram[descriptive diagram]{
+				{\textit{~$\backslash$citep\{\} }, for a parenthetical citation},
+				{\textit{~$\backslash$citet\{\} }, for a textual one},
+			}}
+	\end{center}
+	To get your visual \textit{.pdf}, set \textit{PdfLaTeX} as your compiler.
+\end{slide}
+%%==========================================================================================
+
+
+%%==========================================================================================
+\begin{slide}[toc=,bm=]{Usage of the Templates - Slides \& Poster}
+	Use \textit{.eps} as your picture file.\\
+	Encapsulated PostScrip is a vector format designed for printing to PostScript printers and imagesetters. 
+	It is considered the best choice of graphics format for high resolution printing of illustrations.\\
+	If \textit{.eps} file in your \textit{.tex}, set \texttt{LaTex.DVIPS.PS2PDF} as your compiler.
+	
 \end{slide}
 %%==========================================================================================
 
@@ -533,7 +616,6 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 	\end{figure}
 \end{slide}
 %%==========================================================================================
-
 
 
 %%==========================================================================================
@@ -572,7 +654,6 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 %%==========================================================================================
 
 
-
 %%==========================================================================================
 \begin{slide}{TeXstudio}
 	\textit{TeXstudio} is a cross-platform open-source \LaTeX editor. 
@@ -591,14 +672,20 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 	\end{figure}
 
 \end{slide}
+%%==========================================================================================
 
-\begin{slide}{Hints}
-	\begin{figure}
-		\centering
-		\includegraphics[width=0.45\linewidth]{figures//writing-tools//problems.eps}
-	\end{figure}
-\end{slide}
 
+%%==========================================================================================
+%\begin{slide}{Hints}
+%	\begin{figure}
+%		\centering
+%		\includegraphics[width=0.45\linewidth]{figures//writing-tools//problems.eps}
+%	\end{figure}
+%\end{slide}
+%%==========================================================================================
+
+
+%%==========================================================================================
 \section{Zotero}
 \begin{slide}{Zotero}
 	\textit{Zotero} is a free and open-source reference management software to manage 
@@ -609,7 +696,29 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 	\end{figure}
 
 \end{slide}
+%%==========================================================================================
 
+
+
+%%==========================================================================================
+\begin{slide}[toc=,bm=]{Zotero}
+\begin{itemize}
+	\item 	Zotero support 6 ways to import items.\\
+	\begin{itemize}
+		\item Web Translators - URL bar icon
+		\item Manual Input or Edit From a bibliographic
+		\item Format - \textit{RIS}, \textit{BibTeX}, \textit{MARC}, etc. 
+		\item Add by identifier - \textit{DOI}, \textit{ISBN}, \textit{PMID} 
+		\item Add PDF then Retrieve Metadata
+		\item Get any Webpage with basic data
+	\end{itemize}
+\item To Export 
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.5\linewidth]{figures//writing-tools//zotero3.eps}
+	\end{figure}
+\end{itemize}
+\end{slide}
 %%==========================================================================================
 
 
