@@ -69,6 +69,23 @@ backgroundcolor=\color{yellow!20},
 basicstyle=\footnotesize\ttfamily}
 }{}
 
+%%tikz
+\usepackage{verbatim}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\tikzset{%
+  >={Latex[width=2mm,length=2mm]},
+  % Specifications for style of nodes:
+            base/.style = {rectangle, rounded corners, draw=black,
+                           minimum width=9cm, minimum height=1cm,
+                           text centered, font=\sffamily},
+            startstop/.style = {base, fill=red!30},
+            activityStarts/.style = {base, fill=blue!30},
+            process/.style = {base, minimum width=8cm, fill=orange!15,
+                           font=\ttfamily},
+}
 
 \usepackage{hyperref}
 \hypersetup{ % TODO: PDF meta Data
@@ -413,6 +430,42 @@ with three executive bash shell scripts:
 \end{slide}
 %%
 %%==========================================================================================
+\begin{slide}{TULIP Presentation Procedure}
+\selectcolormodel{rgb}
+\begin{itemize}
+  \item General presentation procedure in TULIP:
+\begin{center}
+
+\scalebox{0.6}{
+\begin{tikzpicture}[node distance=2cm,
+    every node/.style={fill=white, font=\sffamily}, align=center]
+  \node (start)             [activityStarts]          {Activity starts};
+  \node (groupMeeting)      [process, below of=start] {Report process in $\infty$ meeting};
+  \node (preparProblem)     [process, below of=groupMeeting]{Prepar atleast 10 problems};
+  \node (readingTeam)       [process, below of=preparProblem]{Report in Reading Team};
+  \node (collectProblem)    [process, below of=readingTeam]{Collect Problems $\&$ Answser};
+  \node (tulipSeminar)      [process, below of=collectProblem]{Report in Tulip Seminar};
+  \node (collectProblem2)   [process, below of=tulipSeminar]{Collect Problems $\&$ Answser};
+  \node (onResumeBlock)     [startstop, below of=collectProblem2]  {Report in External Place};
+
+  \draw[->]      (start) -- node{Use PPT}(groupMeeting);
+  \draw[->]     (groupMeeting) -- (preparProblem);
+  \draw[->]     (preparProblem) -- node{Use Slides}(readingTeam);
+  \draw[->]     (readingTeam) -- (collectProblem);
+  \draw[->]     (collectProblem) -- (tulipSeminar);
+  \draw[->]     (tulipSeminar) -- (collectProblem2);
+  \draw[->]     (collectProblem2) -- (onResumeBlock);
+
+  \end{tikzpicture}}
+\end{center}
+\end{itemize}
+
+\end{slide}
+%%==========================================================================================
+%%
+
+%%
+%%==========================================================================================
 
 \section{What \& How to Present}
 
@@ -580,6 +633,18 @@ concise manner.
 \end{itemize}
 \end{slide}
 
+\section{Question Time}
+
+\begin{slide}[toc=,bm=]{Question Time}
+\begin{description}
+  \item[Genuine request] It should cause you no difficulty if you are adequately prepared.\pause
+  \item[Selfish question] It is \textcolor{orange}{polite to take a few seconds} to compose a reply that directly or indirectly compliments the questioner.\pause
+  \item[Malicious question]Be \textcolor{orange}{prepared},
+  be polite,
+  and avoid getting involved in a \textcolor{orange}{lengthy exchange}.
+\end{description}
+\end{slide}
+
 \section{Getting Through to the Audience}
 \begin{slide}[toc=,bm=]{Getting Through to the Audience}
 The next major hurdle is when you find yourself actually
@@ -631,18 +696,6 @@ Faulty delivery can ruin even a wellprepared talk.
 \end{itemize}
 \end{slide}
 
-\section{Question Time}
-
-\begin{slide}[toc=,bm=]{Question Time}
-\begin{description}
-  \item[Genuine request] It should cause you no difficulty if you are adequately prepared.\pause
-  \item[Selfish question] It is \textcolor{orange}{polite to take a few seconds} to compose a reply that directly or indirectly compliments the questioner.\pause
-  \item[Malicious question]Be \textcolor{orange}{prepared},
-  be polite,
-  and avoid getting involved in a \textcolor{orange}{lengthy exchange}.
-\end{description}
-\end{slide}
-
 \section{Visual and Aural Aids}
 \begin{slide}[toc=,bm=]{Visual and Aural Aids}
 Now that you have a well-prepared talk and can deliver it with style.
@@ -666,13 +719,13 @@ Now that you have a well-prepared talk and can deliver it with style.
 \end{slide}
 %%==========================================================================================
 %
-%\begin{slide}[toc=,bm=]{Questions?}
-%\begin{center}
-%\begin{figure}
-%    \animategraphics[autoplay, loop, height=1\textheight]{5}{figures//gif//question//q_}{1}{30}
-%\end{figure}
-%\end{center}
-%\end{slide}
+\begin{slide}[toc=,bm=]{Questions?}
+\begin{center}
+\begin{figure}
+    \animategraphics[autoplay, loop, height=0.5\textheight]{5}{figures//management//gif//question//q_}{1}{30}
+\end{figure}
+\end{center}
+\end{slide}
 %%
 %%==========================================================================================
 
