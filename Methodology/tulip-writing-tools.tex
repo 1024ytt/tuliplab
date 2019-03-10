@@ -149,7 +149,7 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 
 %%==========================================================================================
 \section{Academic Writing Tools}
-\begin{slide}{Academic Writing Tools}
+\begin{slide}[toc=,bm=]{Academic Writing Tools}
 	\selectcolormodel{rgb}
 	At the beginning of research, as a member in TULIP you should be familiar 
 	with academic writing tools.\\~\\
@@ -176,7 +176,28 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 
 %%==========================================================================================
 
-\section{Github \& Bitbucket}
+\section{Git}
+\begin{slide}[toc=,bm=]{\textit{Git}}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.15\linewidth]{figures//writing-tools//git-icon.eps}		
+	\end{figure}
+	\href{https://git-scm.com/}{\textit{Git}} is a free and open source \textcolor{orange}{distributed version control system} 
+	designed to handle everything from small to very large projects with speed and efficiency.\\
+	\selectcolormodel{rgb}
+	\begin{center}
+		\smartdiagramset{border color=none,
+			description text width = 4.5cm,
+			set color list={blue!15,blue!22,blue!29,blue!36,blue!43},
+			back arrow disabled=true}
+	\smartdiagram[flow diagram:horizontal]{
+					Version1, Version2, Version3, Version4, VersionN}
+	\end{center}
+\end{slide}
+%%==========================================================================================
+
+
+%%==========================================================================================
 
 \begin{slide}{\textit{Github} VS. \textit{Bitbucket}}	
 	\begin{itemize}
@@ -204,7 +225,7 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 			\textbf{Feature}  & \textbf{\textit{Github}} & \textbf{\textit{Bitbucket}}\\
 			\midrule
 			\textbf{Supported VCS}
-			&  Mercurial, Git   
+			&  Git, Mercurial   
 			&  Git \\
 			\textbf{Public Repos}
 			&  Free, Unlimited
@@ -261,12 +282,12 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 	\twocolumn{
 		\begin{figure}
 			\centering
-			\includegraphics[width=0.75\linewidth]{figures//writing-tools//user_config.eps}
+			\includegraphics[width=0.75\linewidth]{figures//writing-tools//user_config1.eps}
 		\end{figure}
 	}{
 		\begin{figure}
 			\centering
-			\includegraphics[width=0.75\linewidth]{figures//writing-tools//user_config1.eps}
+			\includegraphics[width=0.75\linewidth]{figures//writing-tools//user_config.eps}
 		\end{figure}
 	}
 \end{slide}
@@ -285,7 +306,8 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 
 %%==========================================================================================
 \begin{slide}[toc=,bm=]{GitFlow Branches}
-	Top two important branches
+\begin{itemize}
+	\item Main branches
 	\begin{itemize}
 		\item \textcolor{orange}{\textit{Master} branch} should be treated as the main flow of your work, 
 		and it should be always production ready, 
@@ -294,6 +316,7 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 		it is the main branch where the source code of HEAD always reflects a state with the latest 
 		delivered development changes for the next release.
 	\end{itemize}
+	\item Assist branches	
 	\begin{itemize}
 		\item \textcolor{orange}{\textit{Feature} branches}: branch off from and merge back into develop branch. 
 		They are used to develop new subsections (features) for the paper.
@@ -307,6 +330,7 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 		It is typically used to fix those identified issues existing in all existing and working branches. 
 		So we use it when revising based on the review comments of the submission.
 	\end{itemize}
+\end{itemize}
 \end{slide}
 %%==========================================================================================
 
@@ -316,12 +340,12 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 	\twocolumn{
 		\begin{figure}
 			\centering
-			\includegraphics[width=0.75\linewidth]{figures//writing-tools//gitflow2.eps}
+			\includegraphics[width=0.75\linewidth]{figures//writing-tools//gitflow3.eps}
 		\end{figure}
 	}{
 		\begin{figure}
 			\centering
-			\includegraphics[width=0.75\linewidth]{figures//writing-tools//gitflow3.eps}
+			\includegraphics[width=0.75\linewidth]{figures//writing-tools//gitflow2.eps}
 		\end{figure}
 	}	
 	
@@ -345,8 +369,8 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 
 
 %%==========================================================================================
-\section{\LaTeX~ \& TeXstudio}
-\begin{slide}{Introduce \LaTeX}
+\section{\LaTeX~}
+\begin{slide}[toc=,bm=]{\LaTeX~}
 	\begin{itemize}
 		\item \textit{\LaTeX} is a high-quality typesetting system; 
 		it includes features designed for the production of technical and 
@@ -356,7 +380,7 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 		\item To start up \textit{\LaTeX} editing, 
 		\textit{MikTex} and \textit{TeXstudio} might be the relative typesetting system and editor need to be 
 		installed.\\
-		\item \textcolor{orange}{\faGithub:}\href{https://github.com/tulip-lab/templatex}{TULIP}
+		\item \textcolor{orange}{\faGithub}\href{https://github.com/tulip-lab/templatex}{TULIP}
 		provides templates for slides, 
 		paper and thesis.
 	\end{itemize}
@@ -396,7 +420,6 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 			descriptive items y sep = 2.5cm,
 			module minimum height = 2cm,}
 		\scalebox{0.7}{\smartdiagram[descriptive diagram]{
-				{\textbf{\textit{mainbody.tex}}, the main body of report-*.tex},
 				{\textbf{\textit{report-*.tex}}, the stem file for different conference proceedings
 					\begin{itemize}
 						\item \textit{report.tex}: the complete report stem file
@@ -405,8 +428,9 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 						\item \textit{report-acm/ieee/lncs.tex}:the stem file for ACM/IEEE/LNCS 
 						conference proceedings
 					\end{itemize}},
+				{\textbf{\textit{mainbody.tex}}, the main body of report-*.tex},
 				{\textbf{\textit{preamble.tex}}, stylish file},
-				{\textbf{textit{slides.tex}}, one template for slides with notes},
+				{\textbf{\textit{slides.tex}}, one template for slides with notes},
 				{\textbf{\textit{poster.tex}}, one poster template}}}
 	\end{center}
 \end{slide}
@@ -577,8 +601,10 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 %%==========================================================================================
 \begin{slide}[toc=,bm=]{Usage of the Templates - Slides \& Poster}
 	Use \textit{.eps} as your picture file.\\
-	Encapsulated PostScrip is a vector format designed for printing to PostScript printers and imagesetters. 
-	It is considered the best choice of graphics format for high resolution printing of illustrations.\\
+	\begin{itemize}
+		\item Encapsulated PostScrip is a vector format designed for printing to PostScript printers and imagesetters. 
+		It is considered the best choice of graphics format for high resolution printing of illustrations.\\
+	\end{itemize}
 	If \textit{.eps} file in your \textit{.tex}, set \texttt{LaTex.DVIPS.PS2PDF} as your compiler.
 	
 \end{slide}
@@ -586,8 +612,8 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 
 
 %%==========================================================================================
-\begin{slide}[toc=,bm=]{Rules for Template}
-	To use these templates, 
+\begin{slide}[toc=,bm=,method=direct]{Rules for Template}
+	To use these templates in collaborative writing, 
 	there are some rules you need to follow. \\
 	\begin{enumerate}
 		\item Avoid ineffective modifications. 
@@ -601,8 +627,15 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 		\item If your comment has been properly addressed by co-authors, 
 		you MUST remove or comment out both the original and 
 		the response marginal comments.
+		\begin{lstlisting}[language=TeX]
+			\gangli{What is wrong here?}
+			\qwu{This is my response ...}
+		\end{lstlisting}
 		\item You can use something similar to the following code to 
 		indicate where you are updating up to.
+		\begin{lstlisting} [language=TeX]
+			\gliMarker %TODO: YourName up to here!
+		\end{lstlisting}
 	\end{enumerate}
 \end{slide}
 %%==========================================================================================
@@ -621,13 +654,7 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 %%==========================================================================================
 \begin{slide}[toc=,bm=]{Rules for \LaTeX + Git Workflow}
 	\begin{enumerate}
-		\item Frequent commits of minor changes: 
-		add a meaningful and descriptive comment when committing 
-		your modifications to the repository
-		\item Don’t commit a broken version: 
-		verify that your code can be compiled flawlessly before committing.
-		\item Use \textit{git-latexdiff} or \textit{latexdiff} (or \textit{git} compare tools) to 
-		critically review your modifications before committing them to the repository.
+		\item Frequent commits of minor changes
 		\item Use the \textit{git} client for copying, 
 		moving, 
 		or renaming files and folders that are under revision control.
@@ -646,8 +673,6 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 			If you are quite sure that it can be done without affecting other 
 			collaborating author’s work-flow, you can directly work on the \textit{develop} branch.
 		\end{itemize}
-		\item Using tagging extensively to keep notes on what a given point in the history means. 
-		You may need to familiar with \textit{SemVer}.
 	\end{enumerate}
 	
 \end{slide}
@@ -692,9 +717,8 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 	bibliographic data and related research materials.\\
 	\begin{figure}
 		\centering
-		\includegraphics[width=0.6\linewidth]{figures//writing-tools//zotero.eps}
+		\includegraphics[width=0.55\linewidth]{figures//writing-tools//zotero.eps}
 	\end{figure}
-
 \end{slide}
 %%==========================================================================================
 
