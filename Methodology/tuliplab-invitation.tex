@@ -1,0 +1,71 @@
+\documentclass{article}
+\pagestyle{empty}
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{geometry,fontspec,tikz}
+\geometry{a6paper,landscape,hmargin={.5cm,.5cm},vmargin={.2cm,.2cm}}
+\setmainfont[Ligatures=TeX]{Adobe Garamond Pro}
+\usetikzlibrary{fadings}
+\tikzfading[name=fade right,
+left color=transparent!0,
+right color=transparent!100]
+\setlength\parindent{0pt}
+\usepackage{stackengine}
+\usepackage{graphicx}
+
+
+\begin{document}
+\begin{tikzpicture}[overlay,remember picture]
+    \def\stackalignment{r}
+
+  \node[anchor=east,inner sep=0pt] (pic) at (current page.east)
+    { \bottominset{\includegraphics[height=3cm]{figures//invitation//register}}
+    {\includegraphics[height=1\pdfpageheight]{figures//invitation//background}}{70pt}{110pt}};
+  \fill[white,path fading=fade right] (pic.north west) rectangle (pic.south east);
+  \coordinate (pin) at (12,-2.5);
+  %\filldraw[ultra thick,draw=red,fill=red!50] (pin) -- ++(70:.5) arc (-20:200:.18) -- cycle;
+  %\filldraw[ultra thick,draw=red,fill=red!50] (pin) -- ++(70:.5) arc (-20:200:.18) -- cycle;
+  %\path (pin) -- ++(0,.5) node[draw,fill,red,circle,inner sep=1pt] {};
+\end{tikzpicture}%
+
+\obeylines%
+\vspace{.8cm}
+{\addfontfeatures{Scale=3,LetterSpace=10} INVITATION}
+\medbreak
+\textit{%
+%  Dear Academy members,
+  You are invited to attend \href{http://www.tulip.org.au}{TULIP Seminar} on Research Methodology
+}
+%\vfill
+%\vspace{2pt}
+{\addfontfeatures{Scale=1.4,LetterSpace=3}\scshape }
+
+\textbf{Time}:  \textit{14:00-21:00 (GMT+8), 10/03/2019} \\
+\textbf{Venue}: \textit{Room 605, Experiment Building $3$, XSYU, Xi'an, China}
+\textbf{Online}: ``\textit{\texttt{TULIP Seminar}}''
+\textbf{Language}: \textit{Mandarin}
+
+\smallbreak
+{\addfontfeatures{Scale=1.2,LetterSpace=2}\scshape  Schedule}
+\textit{%
+\footnotesize
+%\small
+{
+J. Kong, Qiujun Lan, Feng Yi, Ziqi Yan,
+Chris Zhang, Meng Ren, Ziwei Hou,
+Xin Han, Shu Li, Haiyang Xia,
+Shaoni Wang, Xiaojuan Cheng, Ye Lei
+  }
+}
+\bigbreak
+{\addfontfeatures{Scale=0.5,LetterSpace=2}\scshape }
+%\smallbreak
+\footnotesize{
+\textbf{Master of Ceremonies}: \textit{M. Ren}
+\textbf{Secretary}: \textit{Y. Lei} (Text); \textit{X. Han}, \textit{S.N.Wang} (Video)
+}
+%\includegraphics[width=4.8cm]{logos/tulip-wordmark.eps}
+\includegraphics[width=0.355\textwidth,clip=false]{logos/tulip-wordmark.eps}
+
+\end{document}

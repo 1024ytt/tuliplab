@@ -340,12 +340,12 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 	\twocolumn{
 		\begin{figure}
 			\centering
-			\includegraphics[width=0.75\linewidth]{figures//writing-tools//gitflow3.eps}
+			\includegraphics[width=0.75\linewidth]{figures//writing-tools//gitflow2.eps}
 		\end{figure}
 	}{
 		\begin{figure}
 			\centering
-			\includegraphics[width=0.75\linewidth]{figures//writing-tools//gitflow2.eps}
+			\includegraphics[width=0.75\linewidth]{figures//writing-tools//gitflow3.eps}
 		\end{figure}
 	}	
 	
@@ -468,7 +468,8 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 				\toprule
 				\textbf{local \textit{texmf} tree} & \textbf{One Repository/Paper} \\
 				\midrule
-				\tabitem Put the \textit{.bib} in local \textit{texmf} tree & \tabitem GitInfo2\\
+				\tabitem Put the \textit{.bib} in local \textit{texmf} tree & \tabitem GitInfo2: post-checkout, 
+				post-commit and post-merge\\
 				\tabitem Add local \textit{texmf} tree to git & \tabitem \textit{LaTeXDiff} and 
 				\textit{Git-LaTeXDiff} \\[.5\normalbaselineskip]
 				\bottomrule
@@ -589,11 +590,12 @@ list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
 			descriptive items y sep = 2cm,
 			module minimum height = 2cm,}
 		\scalebox{0.7}{\smartdiagram[descriptive diagram]{
-				{\textit{~$\backslash$citep\{\} }, for a parenthetical citation},
-				{\textit{~$\backslash$citet\{\} }, for a textual one},
+				{\textit{~$\backslash$cite\{\} }, general citation},
+				{\textit{~$\backslash$citep\{\} }, inside the parentheses},
+				{\textit{~$\backslash$citet\{\} }, outside the parentheses},
 			}}
 	\end{center}
-	To get your visual \textit{.pdf}, set \textit{PdfLaTeX} as your compiler.
+	To get your visual \textit{.pdf}, you may set \textit{PdfLaTeX} or \textit{LuaLaTeX} as your compiler.
 \end{slide}
 %%==========================================================================================
 
