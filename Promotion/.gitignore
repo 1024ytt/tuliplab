@@ -1,0 +1,10 @@
+*.toc
+*.synctex
+*.bm
+*.dvi
+*.aux
+*.log
+*.pdf
+*.ps
+*.out
+*.synctex(busy)
